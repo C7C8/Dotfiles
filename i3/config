@@ -6,8 +6,10 @@
 #Disable beeps
 exec xset -b
 
-#Desktop background
+#Desktop background, conky
 exec feh --bg-scale ~/Pictures/Custom_Wallpapers/Red_Beams.png
+exec conky
+
 
 set $mod Mod4
 
