@@ -41,7 +41,7 @@ if ($status eq 'Discharging') {
 	$full_text .= ' DIS';
 } elsif ($status eq 'Charging') {
 	$full_text .= ' CHR';
-	$color .= "#00FF00\n"
+	$color .= "#00F0FF\n"
 }
 
 $short_text = $full_text;
@@ -65,6 +65,8 @@ if ($status eq 'Discharging') {
 		$color .= "#FFF600\n";
 	} elsif ($percent < 85) {
 		$color .= "#A8FF00\n";
+	} else {
+		$color .= "#00FF00\n";
 	}
 
 	if ($percent < 5) {

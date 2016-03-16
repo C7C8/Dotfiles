@@ -1,0 +1,80 @@
+alignment top_right
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+double_buffer yes
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+gap_x 25
+gap_y 15
+maximum_width 330
+max_port_monitor_connections 64
+max_specials 512
+max_user_text 16384
+minimum_size 330 10
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+wm_class_name Conky
+own_window_colour black
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent no
+own_window_type normal
+own_window no
+stippled_borders 2
+update_interval 2
+uppercase no
+use_spacer yes
+use_xft yes
+xftalpha 0.8
+xftfont  Bitstream Vera Sans Mono:size=9
+
+TEXT
+${color #ffffff}$nodename     ${alignc}$sysname $kernel ${alignr}$color${time %l:%M:%p}
+
+${color #ffffff}Uptime:$color $uptime ${color #ffffff} Load:$color $loadavg
+${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}   ${color #ffffff}Disk I/O: $color${diskio}
+${color #ffffff}${cpugraph 0 32,155 104E8B ffffff} $alignr${color #ffffff}${diskiograph 32,155 104E8B ffffff 750}
+${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax - $memperc% ${color #ffffff}$membar
+${color #ffffff}Swap Usage:$color $swap${color #ffffff}/${color}$swapmax - $swapperc% ${color #ffffff}${swapbar}
+${color #ffffff}Procs:$color $processes ${color #ffffff}Run:$color $running_processes ${color #ffffff}CPU:$color ${i2c 0-002d temp 2}${color #ffffff} MB:$color ${i2c 0-002d temp 1} ${color #ffffff}HD:$color ${hddtemp /dev/hda}
+${color #ffffff}Entropy: ${color}${entropy_avail}${color #ffffff}/${color}${entropy_poolsize} ${color #ffffff}${entropy_bar}
+${color #ffffff}Net Down:$color ${downspeed wlan1} k/s      ${color #ffffff}Net Up:$color ${upspeed wlan1} k/s
+${color #ffffff}${downspeedgraph wlan1 32,155 104E8B ffffff} $alignr${color #ffffff}${upspeedgraph wlan1 32,155 104E8B ffffff}
+${color #ffffff}File systems:
+ ${color #ffffff}/          $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${fs_bar 5,120 /}
+ ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${fs_bar 5,120 /home}
+ ${color #ffffff}/opt       $color${fs_used /opt}/${fs_size /opt}${alignr}${color #ffffff}${fs_bar 5,120 /opt}
+ ${color #ffffff}/usr/local $color${fs_used /usr/local}/${fs_size /usr/local}${alignr}${color #ffffff}${fs_bar 5,120 /usr/local}
+ ${color #ffffff}/var       $color${fs_used /var}/${fs_size /var}${alignr}${color #ffffff}${fs_bar 5,120 /var}
+ ${color #ffffff}/share1    $color${fs_used /share1}/${fs_size /share1}${alignr}${color #ffffff}${fs_bar 5,120 /share1}
+
+${color #ffffff}Top Processes:
+${color #ffffff}Name              PID     CPU%   MEM%
+$color ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+$color ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+$color ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color #ffffff}Mem usage
+$color ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+$color ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+$color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
+
+${color #ffffff}Port(s)${alignr}#Connections
+$color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr}ALL: ${tcp_portmon 1 65535 count}
+${color #ffffff}Inbound Connection ${alignr} Local Service/Port$color
+ ${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
+ ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
+ ${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
+ ${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
+ ${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
+${color #ffffff}Outbound Connection ${alignr} Remote Service/Port$color
+ ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+ ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+ ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+ ${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+ ${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}

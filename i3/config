@@ -7,7 +7,7 @@
 exec xset -b
 
 #Desktop background
-exec feh --bg-scale Pictures/Custom_Wallpapers/Red_Beams.png
+exec feh --bg-scale ~/Pictures/Custom_Wallpapers/Red_Beams.png
 
 set $mod Mod4
 
@@ -121,9 +121,12 @@ bar {
 
 # Custom keybinds
 bindsym $mod+d exec synapse
-bindsym $mod+Control+n exec nautilus
+bindsym $mod+Control+f exec pcmanfm -n
+bindsym $mod+Control+m exec pcmanfm -n ~/Music/AM & vlc
+bindsym $mod+Control+s exec pcmanfm -n ~/Documents/School\ Stuff/
 bindsym $mod+Control+p exec pavucontrol
 bindsym $mod+Control+w exec gnome-control-center network
+bindsym $mod+Control+r exec gnome-sound-recorder
 bindsym $mod+F4 exec xbacklight -dec 10
 bindsym $mod+F5 exec xbacklight -inc 10
 bindsym $mod+F11 exec amixer -D pulse sset Master 5%-
@@ -134,4 +137,4 @@ bindsym $mod+x scratchpad show
 
 #System-related custom keybinds
 bindsym $mod+l exec --no-startup-id i3lock -i ~/Pictures/Custom_Wallpapers/Red_Beams_LOCK.png
-bindsym $mod+Mod1+l exec sh ~/.i3/lock-suspend.sh
+bindsym $mod+Mod1+l exec sh ~/.i3/i3scripts/lock-suspend.sh
