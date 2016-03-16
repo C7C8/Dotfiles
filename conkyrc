@@ -49,10 +49,6 @@ ${color #ffffff}${downspeedgraph wlan1 32,155 104E8B ffffff} $alignr${color #fff
 ${color #ffffff}File systems:
  ${color #ffffff}/          $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${fs_bar 5,120 /}
  ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${fs_bar 5,120 /home}
- ${color #ffffff}/opt       $color${fs_used /opt}/${fs_size /opt}${alignr}${color #ffffff}${fs_bar 5,120 /opt}
- ${color #ffffff}/usr/local $color${fs_used /usr/local}/${fs_size /usr/local}${alignr}${color #ffffff}${fs_bar 5,120 /usr/local}
- ${color #ffffff}/var       $color${fs_used /var}/${fs_size /var}${alignr}${color #ffffff}${fs_bar 5,120 /var}
- ${color #ffffff}/share1    $color${fs_used /share1}/${fs_size /share1}${alignr}${color #ffffff}${fs_bar 5,120 /share1}
 
 ${color #ffffff}Top Processes:
 ${color #ffffff}Name              PID     CPU%   MEM%

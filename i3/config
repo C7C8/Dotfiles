@@ -7,7 +7,7 @@
 exec xset -b
 
 #Desktop background, conky
-exec feh --bg-scale ~/Pictures/Custom_Wallpapers/Red_Beams.png
+exec feh --bg-scale ~/Pictures/Custom_Wallpapers/Red_Beams-CONKY.png
 exec conky
 
 
