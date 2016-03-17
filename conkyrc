@@ -27,7 +27,7 @@ own_window_transparent no
 own_window_type normal
 own_window no
 stippled_borders 2
-update_interval 2
+update_interval 1
 uppercase no
 use_spacer yes
 use_xft yes
@@ -49,6 +49,7 @@ ${color #ffffff}${downspeedgraph wlan1 32,155 104E8B ffffff} $alignr${color #fff
 ${color #ffffff}File systems:
  ${color #ffffff}/          $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${fs_bar 5,120 /}
  ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${fs_bar 5,120 /home}
+ ${color #ffffff}/home/sourec/SecondaryStorage      $color${fs_used /home/sourec/SecondaryStorage}/${fs_size /home/sourec/SecondaryStorage}${alignr}${color #ffffff}${fs_bar 5,120 }
 
 ${color #ffffff}Top Processes:
 ${color #ffffff}Name              PID     CPU%   MEM%
