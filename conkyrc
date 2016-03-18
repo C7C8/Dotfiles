@@ -35,18 +35,18 @@ xftalpha 0.8
 xftfont  Sans Serif:size=9
 
 TEXT
-${color #ffffff}Uptime:$color $uptime ${color #ffffff} Load:$color $loadavg
-
 ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
- ${color #ffffff}/          $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${fs_bar 5,120 /}
- ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${fs_bar 5,120 /home}
- ${color #ffffff}SStorage      $color${fs_used /home/sourec/SecondaryStorage}/${fs_size /home/sourec/SecondaryStorage}${alignr}${color #ffffff}${fs_bar 5,120 }
+ ${color #ffffff}/              $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${alignr}${fs_bar 5,160 /}
+ ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${alignr}${fs_bar 5,160 /home}
+ ${color #ffffff}SStorage  $color${fs_used /home/sourec/SecondaryStorage}/${fs_size /home/sourec/SecondaryStorage}${alignr}${color #ffffff}${fs_bar 5,160 /home/sourec/SecondaryStorage}
 
 ${font sans-serif:bold:size=8}CPU/MEM ${hr 2} ${font sans-serif:normal:size=8}
 ${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}        ${color #ffffff}Disk I/O: $color${diskio}
 ${color #ffffff}${cpugraph 0 32,155 104E8B ffffff} $alignr${color #ffffff}${diskiograph 32,155 104E8B ffffff 750}
-${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax - $memperc% ${color #ffffff}$membar
-${color #ffffff}Swap Usage:$color $swap${color #ffffff}/${color}$swapmax - $swapperc% ${color #ffffff}${swapbar}
+${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax - $memperc% ${color #ffffff}${alignr}${membar 5,120}
+${color #ffffff}Swap Usage:$color $swap${color #ffffff}/${color}$swapmax - $swapperc% ${color #ffffff}${alignr}${swapbar 5,120}
+${color #ffffff}Uptime:$color $uptime
+
 ${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2} ${font sans-serif:normal:size=8}
 ${color #ffffff}Procs:$color $processes
 ${font sans-serif:bold:size=6}Name                  PID        CPU%      MEM%${font sans-serif:normal:size=8}
@@ -58,12 +58,12 @@ $color ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
 $color ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
 $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
-
-${font sans-serif:bold:size=8}NETWORK ${hr 2} ${font sans-serif:normal:size=8}
-${color #ffffff}Net Down:$color ${downspeed wlan1} k/s         ${color #ffffff}Net Up:$color ${upspeed wlan1} k/s
+${font sans-serif:bold:size=8}WIRELESS (wlan1) - ${addr wlan1} ${hr 2} ${font sans-serif:normal:size=8}
+${font sans-serif:bold:size=6}eth1 - ${addr eth1} ${font sans-serif:normal:size=8}
+${color #ffffff}Net Down:$color ${downspeed wlan1} k/s ${alignr}${color #ffffff}Net Up:$color ${upspeed wlan1} k/s
 ${color #ffffff}${downspeedgraph wlan1 32,155 104E8B ffffff} $alignr${color #ffffff}${upspeedgraph wlan1 32,155 104E8B ffffff}
 ${color #ffffff}Port(s)${alignr}#Connections
-$color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr}ALL: ${tcp_portmon 1 65535 count}
+$color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}
 ${color #ffffff}Inbound Connection ${alignr} Local Service/Port$color
  ${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
  ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
