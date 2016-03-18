@@ -35,6 +35,7 @@ xftalpha 0.8
 xftfont  Sans Serif:size=9
 
 TEXT
+${font sans-serif:bold:size=10}'sourec@$nodename'${alignr}UP: ${uptime}
 ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
  ${color #ffffff}/              $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${alignr}${fs_bar 5,160 /}
  ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${alignr}${fs_bar 5,160 /home}
@@ -43,9 +44,8 @@ ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
 ${font sans-serif:bold:size=8}CPU/MEM ${hr 2} ${font sans-serif:normal:size=8}
 ${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}        ${color #ffffff}Disk I/O: $color${diskio}
 ${color #ffffff}${cpugraph 0 32,155 104E8B ffffff} $alignr${color #ffffff}${diskiograph 32,155 104E8B ffffff 750}
-${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax - $memperc% ${color #ffffff}${alignr}${membar 5,120}
-${color #ffffff}Swap Usage:$color $swap${color #ffffff}/${color}$swapmax - $swapperc% ${color #ffffff}${alignr}${swapbar 5,120}
-${color #ffffff}Uptime:$color $uptime
+${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax${color #ffffff}${alignr}${membar 5,120}
+${color #ffffff}Swap Usage:$color $swap${color #ffffff}${color #ffffff}${alignr}${swapbar 5,120}
 
 ${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2} ${font sans-serif:normal:size=8}
 ${color #ffffff}Procs:$color $processes
@@ -69,10 +69,8 @@ ${color #ffffff}Inbound Connections ${alignr} Local Service/Port$color
  ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
  ${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
  ${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
- ${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
 ${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} Remote Service/Port$color
  ${font Courier 10 Pitch:size=8}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
  ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
  ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
  ${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
- ${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
