@@ -7,9 +7,8 @@
 exec xset -b
 
 #Desktop background, conky
-exec feh --bg-scale ~/Pictures/Custom_Wallpapers/Red_Beams-CONKY.png
+exec feh --bg-scale ~/Pictures/Wallpapers/Spaceship_Beam.jpg
 exec conky
-
 
 set $mod Mod4
 
@@ -138,5 +137,4 @@ bindsym $mod+z move scratchpad
 bindsym $mod+x scratchpad show
 
 #System-related custom keybinds
-bindsym $mod+l exec --no-startup-id i3lock -i ~/Pictures/Custom_Wallpapers/Red_Beams_LOCK.png
-bindsym $mod+Mod1+l exec sh ~/.i3/i3scripts/lock-suspend.sh
+bindsym $mod+l exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/MilkyWay-1366.png
