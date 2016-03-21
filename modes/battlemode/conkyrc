@@ -76,7 +76,7 @@ ${goto 626}${font Kremlin:bold:size=18}${color 5a5a5a}${time %H:%M:%S}${font san
 
 ${goto 260}${exec acpi -t | grep -Eo '[0-9]+\.[0-9]'} C
 
-
+${goto 94}${font FreeMono:bold:size=8}${color 7a7a7a}SOUREC@IEXPLODER${font sans-serif:bold:size=8}${color ffffff}
 
 
 
