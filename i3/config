@@ -6,9 +6,8 @@
 #Disable beeps
 exec xset -b
 
-#Desktop background, conky
-exec feh --bg-scale ~/Pictures/Wallpapers/Spaceship_Beam.jpg
-exec conky
+#Switch to standby mode
+exec /home/sourec/Dotfiles/modes/switch_battle.sh
 
 set $mod Mod4
 
@@ -124,7 +123,6 @@ bar {
 bindsym $mod+d exec synapse
 bindsym $mod+Control+f exec pcmanfm -n
 bindsym $mod+Control+m exec pcmanfm -n ~/Music/AM & vlc
-bindsym $mod+Control+s exec pcmanfm -n ~/Documents/School\ Stuff/
 bindsym $mod+Control+p exec pavucontrol
 bindsym $mod+Control+w exec gnome-control-center network
 bindsym $mod+Control+r exec gnome-sound-recorder
@@ -135,6 +133,10 @@ bindsym $mod+F12 exec amixer -D pulse sset Master 5%+
 bindsym $mod+F10 exec amixer -D pulse sset Master 0%
 bindsym $mod+z move scratchpad
 bindsym $mod+x scratchpad show
+
+#"Modes"
+bindsym $mod+Control+b exec /home/sourec/Dotfiles/modes/switch_battle.sh
+bindsym $mod+Control+s exec /home/sourec/Dotfiles/modes/switch_standby.sh
 
 #System-related custom keybinds
 bindsym $mod+l exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/MilkyWay-1366.png
