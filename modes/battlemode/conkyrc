@@ -49,12 +49,12 @@ ${goto 194}${font sans-serif:bold:size=8}Brightness: ${exec xbacklight | awk 'BE
 
 
 ${goto 194}CPU: ${cpu}%
-${goto 194}${cpugraph 0 24,128 104E8B ffffff}
+${goto 194}${cpugraph 0 24,128 440000 dd0000}
 ${goto 20}BAT: ${exec acpi -V | grep "Battery 0: Dis" | egrep -o '[0-9]+%'} #NESTED GREP STATEMENTS! YEAH!
 
 
 ${goto 180}wlan1: ${addr wlan1}
-${goto 180}${downspeedgraph wlan1 24,128 104E8B ffffff}
+${goto 180}${downspeedgraph wlan1 24,128 440000 dd0000}
 ${goto 180}D: ${downspeed wlan1} U: ${upspeed wlan1}
 
 
@@ -84,6 +84,6 @@ ${goto 255}${exec acpi -t | grep -Eo '[0-9]+\.[0-9]'} C
 
 
 
-I/O: ${diskio}${goto 217}RAM: ${mem}
-${diskiograph 24,128 104E8B ffffff 750}${goto 217}${memgraph 24,128 104E8B ffffff 750}
+I/O: ${diskio}${goto 217}RAM: ${mem} / 8GiB
+${diskiograph 24,128 440000 dd0000 750}${goto 217}${memgraph 24,128 440000 dd0000 750}
 ${goto 217}${membar 5,128}
