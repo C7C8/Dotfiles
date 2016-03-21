@@ -32,7 +32,7 @@ uppercase no
 use_spacer yes
 use_xft yes
 xftalpha 0.8
-xftfont  Sans Serif:size=9
+xftfont  Sans Serif:size=8
 
 TEXT
 
@@ -66,6 +66,7 @@ ${goto 180}D: ${downspeed wlan1} U: ${upspeed wlan1}
 
 
 
+${goto 626}${font Kremlin:bold:size=18}${color 5a5a5a}${time %H:%M:%S}${font sans-serif:bold:size=8}${color ffffff}
 
 
 
@@ -73,9 +74,7 @@ ${goto 180}D: ${downspeed wlan1} U: ${upspeed wlan1}
 
 
 
-
-
-${goto 255}${exec acpi -t | grep -Eo '[0-9]+\.[0-9]'} C
+${goto 260}${exec acpi -t | grep -Eo '[0-9]+\.[0-9]'} C
 
 
 
@@ -86,4 +85,4 @@ ${goto 255}${exec acpi -t | grep -Eo '[0-9]+\.[0-9]'} C
 
 I/O: ${diskio}${goto 217}RAM: ${mem} / 8GiB
 ${diskiograph 24,128 440000 dd0000 750}${goto 217}${memgraph 24,128 440000 dd0000 750}
-${goto 217}${membar 5,128}
+${goto 217}${membar 5,128 dd0000}
