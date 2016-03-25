@@ -7,7 +7,7 @@
 exec xset -b
 
 #Switch to standby mode
-exec /home/sourec/Dotfiles/modes/switch_battle.sh
+exec /home/sourec/Dotfiles/modes/switch_standby.sh
 
 set $mod Mod4
 
@@ -16,7 +16,7 @@ font pango:Courier 10 Pitch 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # bindsym $mod+d exec dmenu_run
