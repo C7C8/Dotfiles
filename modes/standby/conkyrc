@@ -79,5 +79,5 @@ ${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} R
 
 
 
-${goto 0}${font sans-serif:bold:size=28}${time %I:%M %p}
+${goto 0}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
 ${goto 0}${font sans-serif:normal:size=12}${time %A, %B %d %Y}

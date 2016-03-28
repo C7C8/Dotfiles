@@ -11,7 +11,7 @@ exec /home/sourec/Dotfiles/modes/switch_standby.sh
 
 set $mod Mod4
 
-font pango:Courier 10 Pitch 9
+font pango:Inconsolata 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -122,7 +122,7 @@ bar {
 # Custom keybinds
 bindsym $mod+d exec synapse
 bindsym $mod+Control+f exec pcmanfm -n
-bindsym $mod+Control+m exec pcmanfm -n ~/Music/AM & vlc
+bindsym $mod+Control+m exec pcmanfm -n ~/Music & vlc
 bindsym $mod+Control+p exec pavucontrol
 bindsym $mod+Control+w exec gnome-control-center network
 bindsym $mod+Control+r exec gnome-sound-recorder
