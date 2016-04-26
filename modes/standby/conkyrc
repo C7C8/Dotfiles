@@ -83,4 +83,4 @@ ${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} R
 
 ${goto 0}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
 ${goto 0}${font sans-serif:normal:size=12}${time %A, %B %d %Y}
-                   ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'}| BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
+                   ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
