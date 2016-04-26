@@ -38,11 +38,9 @@ TEXT
 ${font sans-serif:bold:size=10}'sourec@$nodename'
 ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
  ${color #ffffff}/              $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${alignr}${fs_bar 5,81 /}
- ${color #ffffff}/home      $color${fs_used /home}/${fs_size /home}${alignr}${color #ffffff}${alignr}${fs_bar 5,81 /home}
- ${color #ffffff}SStorage  $color${fs_used /home/sourec/SecondaryStorage}/${fs_size /home/sourec/SecondaryStorage}${alignr}${color #ffffff}${fs_bar 5,81 /home/sourec/SecondaryStorage}
 
 ${font sans-serif:bold:size=8}CPU/MEM ${hr 2} ${font sans-serif:normal:size=8}
-${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}        ${color #ffffff}Disk I/O: $color${diskio}
+${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}    ${color #ffffff}Disk I/O: $color${diskio}
 ${color #ffffff}${cpugraph 0 24,128 104E8B ffffff} $alignr${color #ffffff}${diskiograph 24,128 104E8B ffffff 750}
 ${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax${color #ffffff}${alignr}${membar 5,81}
 ${color #ffffff}Swap Usage:$color $swap${color #ffffff}${color #ffffff}${alignr}${swapbar 5,81}
@@ -58,10 +56,10 @@ ${font Courier 10 Pitch:size=8}$color ${top_mem name 1} ${top_mem pid 1} ${top_m
 $color ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
 $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
-${font sans-serif:bold:size=8}WIRELESS (wlan1) - ${addr wlan1} ${hr 2} ${font sans-serif:normal:size=8}
-${font sans-serif:bold:size=6}eth1 - ${addr eth1} ${font sans-serif:normal:size=8}
-${color #ffffff}Net Down:$color ${downspeed wlan1} k/s ${alignr}${color #ffffff}Net Up:$color ${upspeed wlan1} k/s
-${color #ffffff}${downspeedgraph wlan1 24,128 104E8B ffffff} $alignr${color #ffffff}${upspeedgraph wlan1 24,128 104E8B ffffff}
+${font sans-serif:bold:size=8}WIRELESS (wlan0) - ${addr wlan0} ${hr 2} ${font sans-serif:normal:size=8}
+${font sans-serif:bold:size=6}eth0 - ${addr eth0} ${font sans-serif:normal:size=8}
+${color #ffffff}Net Down:$color ${downspeed wlan0} k/s ${alignr}${color #ffffff}Net Up:$color ${upspeed wlan0} k/s
+${color #ffffff}${downspeedgraph wlan0 24,128 104E8B ffffff} $alignr${color #ffffff}${upspeedgraph wlan0 24,128 104E8B ffffff}
 ${color #ffffff}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}
 ${color #ffffff}Inbound Connections ${alignr} Local Service/Port$color
