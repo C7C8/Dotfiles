@@ -1,13 +1,13 @@
 alignment top_right
-background yes
+background true
 border_width 1
 cpu_avg_samples 2
 default_color white
 default_outline_color white
 default_shade_color grey
-double_buffer yes
+double_buffer true
 draw_borders no
-draw_graph_borders yes
+draw_graph_borders true
 draw_outline no
 draw_shades no
 gap_x 15
@@ -18,7 +18,7 @@ max_specials 512
 max_user_text 16384
 minimum_size 330 10
 net_avg_samples 2
-no_buffers yes
+no_buffers true
 out_to_console no
 wm_class_name Conky
 own_window_colour black
@@ -29,8 +29,8 @@ own_window no
 stippled_borders 0
 update_interval 1
 uppercase no
-use_spacer yes
-use_xft yes
+use_spacer true
+use_xft true
 xftalpha 0.8
 xftfont  Sans Serif:size=9
 
@@ -83,4 +83,4 @@ ${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} R
 
 ${goto 0}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
 ${goto 0}${font sans-serif:normal:size=12}${time %A, %B %d %Y}
-                   ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
+                  ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
