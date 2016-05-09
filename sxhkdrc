@@ -5,8 +5,7 @@ super + d
 super + ctrl + f
 	pcmanfm -n
 super + ctrl + m
-	pcmanfm -n ~/Music
-	vlc
+	pcmanfm -n ~/Music & vlc
 super + ctrl + p
 	pavucontrol
 super + ctrl + w
