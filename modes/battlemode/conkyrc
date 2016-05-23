@@ -53,9 +53,9 @@ ${goto 194}${cpugraph 0 24,128 440000 dd0000}
 
 ${goto 20}BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"}
 
-${goto 180}wlan1: ${addr wlan1}
-${goto 180}${downspeedgraph wlan1 24,128 440000 dd0000}
-${goto 180}D: ${downspeed wlan1} U: ${upspeed wlan1}
+${goto 180}wlan1: ${addr wlan0}
+${goto 180}${downspeedgraph wlan0 24,128 440000 dd0000}
+${goto 180}D: ${downspeed wlan0} U: ${upspeed wlan1}
 
 
 

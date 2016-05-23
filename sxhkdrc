@@ -27,6 +27,14 @@ super + l
 ~button1
 	bspc pointer -g focus
 
+# modes
+
+super + ctrl + s
+	~/Dotfiles/modes/switch_standby.sh
+super + ctrl + b
+	~/Dotfiles/modes/switch_battle.sh
+
+
 ####
 # Soundboard stuff
 super + shift + ctrl + s
