@@ -29,3 +29,16 @@ you may need to change:
   a setting specific to my system, a 155 GB Windows-shaped hole before my 
   Linux partitions that has been filled with a BTRFS partition. References
   to it can be deleted. 
+
+##License Note
+Not all files here are strictly my own, and as such the license found in LICENSE.md (GPLv3) doesn't apply to those. For reference, those files are:
+
+* i3/i3scripts/ (has its own README.md file explaining license, GPLv3)
+* media/, although that might change evnetually
+* Images under modes/standby/
+* scripts/vlcinfo
+* soundboard/cymcrash.ogg
+* vim/plugin/
+* vim/syntax/
+
+If you verifiably own any of these files and are within the terms of your license to do so, feel free to raise an issue asking me to remove the file whose presence you object to.
