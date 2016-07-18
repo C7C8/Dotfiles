@@ -11,4 +11,5 @@ feh --bg-scale /home/sourec/Dotfiles/modes/battlemode/full.png
 sleep 0.15
 feh --bg-scale /home/sourec/Dotfiles/modes/battlemode/hud.png
 conky -c /home/sourec/Dotfiles/modes/battlemode/conkyrc & exit
+bspc config bottom_padding 0
 

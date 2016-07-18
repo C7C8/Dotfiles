@@ -2,8 +2,8 @@ alignment top_right
 background false
 border_width 1
 cpu_avg_samples 2
-default_color white
-default_outline_color white
+default_color black
+default_outline_color black
 default_shade_color grey
 double_buffer true
 draw_borders no
@@ -37,16 +37,16 @@ xftfont  Sans Serif:size=9
 TEXT
 ${font sans-serif:bold:size=10}'sourec@$nodename'
 ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
- ${color #ffffff}/              $color${fs_used /}/${fs_size /}${alignr}${color #ffffff}${alignr}${fs_bar 5,81 /}
+ ${color #000000}/              $color${fs_used /}/${fs_size /}${alignr}${color #000000}${alignr}${fs_bar 5,81 /}
 
 ${font sans-serif:bold:size=8}CPU/MEM ${hr 2} ${font sans-serif:normal:size=8}
-${color #ffffff}CPU:$color ${cpu}% ${color #ffffff}${cpubar 5,85}    ${color #ffffff}Disk I/O: $color${diskio}
-${color #ffffff}${cpugraph 0 24,128 104E8B ffffff} $alignr${color #ffffff}${diskiograph 24,128 104E8B ffffff 750}
-${color #ffffff}RAM Usage:$color $mem${color #ffffff}/${color}$memmax${color #ffffff}${alignr}${membar 5,81}
-${color #ffffff}Swap Usage:$color $swap${color #ffffff}${color #ffffff}${alignr}${swapbar 5,81}
+${color #000000}CPU:$color ${cpu}% ${color #000000}${cpubar 5,85}    ${color #000000}Disk I/O: $color${diskio}
+${color #000000}${cpugraph 0 24,128 104E8B 000000} $alignr${color #000000}${diskiograph 24,128 104E8B 000000 750}
+${color #000000}RAM Usage:$color $mem${color #000000}/${color}$memmax${color #000000}${alignr}${membar 5,81}
+${color #000000}Swap Usage:$color $swap${color #000000}${color #000000}${alignr}${swapbar 5,81}
 
 ${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2} ${font sans-serif:normal:size=8}
-${color #ffffff}Procs:$color $processes
+${color #000000}Procs:$color $processes
 ${font sans-serif:bold:size=6}Name                                PID      CPU%     MEM%${font sans-serif:normal:size=8}
 ${font Courier 10 Pitch:size=8}$color ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 $color ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
@@ -58,16 +58,16 @@ $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
 ${font sans-serif:bold:size=8}WIRELESS (wlan0) - ${addr wlan0} ${hr 2} ${font sans-serif:normal:size=8}
 ${font sans-serif:bold:size=6}eth0 - ${addr eth0} ${font sans-serif:normal:size=8}
-${color #ffffff}Net Down:$color ${downspeed wlan0} k/s ${alignr}${color #ffffff}Net Up:$color ${upspeed wlan0} k/s
-${color #ffffff}${downspeedgraph wlan0 24,128 104E8B ffffff} $alignr${color #ffffff}${upspeedgraph wlan0 24,128 104E8B ffffff}
-${color #ffffff}Port(s)${alignr}#Connections
+${color #000000}Net Down:$color ${downspeed wlan0} k/s ${alignr}${color #000000}Net Up:$color ${upspeed wlan0} k/s
+${color #000000}${downspeedgraph wlan0 18,128 104E8B 000000} $alignr${color #000000}${upspeedgraph wlan0 18,128 104E8B 000000}
+${color #000000}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}
-${color #ffffff}Inbound Connections ${alignr} Local Service/Port$color
+${color #000000}Inbound Connections ${alignr} Local Service/Port$color
  ${font Courier 10 Pitch:size=8}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
  ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
  ${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
  ${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
-${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} Remote Service/Port$color
+${font sans-serif:normal:size=8}${color #000000}Outbound Connections ${alignr} Remote Service/Port$color
  ${font Courier 10 Pitch:size=8}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
  ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
  ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
@@ -80,7 +80,7 @@ ${font sans-serif:normal:size=8}${color #ffffff}Outbound Connections ${alignr} R
 
 
 
-
-${goto 0}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
-${goto 0}${font sans-serif:normal:size=12}${time %A, %B %d %Y}
+${color #00aaaa}
+${goto 5}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
+${goto 5}${font sans-serif:normal:size=12}${time %A, %B %d %Y}${color #ffffff}
                 ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
