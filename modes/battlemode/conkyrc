@@ -51,11 +51,11 @@ ${goto 194}${font sans-serif:bold:size=8}Brightness: ${exec xbacklight | awk 'BE
 ${goto 194}CPU: ${cpu}%
 ${goto 194}${cpugraph 0 24,128 440000 dd0000}
 
-${goto 20}BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis)" | grep -Po "\d+%"}
+${goto 20}BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Full)" | grep -Po "\d+%"}
 
-${goto 180}wlan1: ${addr wlan0}
-${goto 180}${downspeedgraph wlan0 24,128 440000 dd0000}
-${goto 180}D: ${downspeed wlan0} U: ${upspeed wlan1}
+${goto 180}wlan1: ${addr wlan1}
+${goto 180}${downspeedgraph wlan1 24,128 440000 dd0000}
+${goto 180}D: ${downspeed wlan1} U: ${upspeed wlan1}
 
 
 
@@ -73,7 +73,7 @@ ${goto 626}${font Kremlin:bold:size=18}${color 5a5a5a}${time %H:%M:%S}${font san
 
 
 
-${goto 260}${exec sensors | grep -oP "Physical\sid\s\d:\s\s\+\d+\.\d+" | grep -oP "\d+\.\d"} °C
+${goto 260}${exec sensors | grep -P "Core 0:\s+\+" | grep -Po "\d+\.\d" | head -1} °C
 
 ${goto 94}${font FreeMono:bold:size=8}${color 7a7a7a}SOUREC@IEXPLODER${font sans-serif:bold:size=8}${color ffffff}
 
