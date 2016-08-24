@@ -36,7 +36,7 @@ xftfont  Sans Serif:size=8
 
 TEXT
 
-${goto 194}${font sans-serif:bold:size=8}Brightness: ${exec xbacklight | awk 'BEGIN {FS="."}{print $1}'}%
+${goto 194}${font sans-serif:bold:size=8}Brightness: ${exec light}%
 
 
 

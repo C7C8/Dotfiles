@@ -58,7 +58,7 @@ $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
 ${font sans-serif:bold:size=8}WIRELESS (wlan1) - ${addr wlan1} ${hr 2} ${font sans-serif:normal:size=8}
 ${font sans-serif:bold:size=6}eth1 - ${addr eth1} ${font sans-serif:normal:size=8}
-${color #000000}Net Down:$color ${downspeed wlan0} k/s ${alignr}${color #000000}Net Up:$color ${upspeed wlan1} k/s
+${color #000000}Net Down:$color ${downspeed wlan1} k/s ${alignr}${color #000000}Net Up:$color ${upspeed wlan1} k/s
 ${color #000000}${downspeedgraph wlan1 18,128 104E8B 000000} $alignr${color #000000}${upspeedgraph wlan1 18,128 104E8B 000000}
 ${color #000000}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}

@@ -1,5 +1,7 @@
 super + Return
 	terminator
+XF86Launch3
+	terminator
 super + d
 	synapse
 super + ctrl + f
@@ -15,9 +17,9 @@ super + ctrl + w
 super + ctrl + r 
 	gnome-sound-recorder
 super + F4
-	xbacklight -dec 10
+	light -U 10
 super + F5
-	xbacklight -inc 10
+	light -A 10
 super + F11
 	amixer -D pulse sset Master 5%-
 super + F12
