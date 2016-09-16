@@ -16,15 +16,15 @@ super + ctrl + w
 	gnome-control-center network
 super + ctrl + r 
 	gnome-sound-recorder
-super + F4
+F1
 	light -U 10
-super + F5
+F2
 	light -A 10
-super + F11
+{F11, XF86AudioPrev}
 	amixer -D pulse sset Master 5%-
-super + F12
+{F12, XF86AudioNext}
 	amixer -D pulse sset Master 5%+
-super + F10
+{F10, XF86AudioStop}
 	amixer -D pulse sset Master 0%
 super + l
 	i3lock -i ~/Dotfiles/media/lock.png
@@ -37,6 +37,36 @@ super + ctrl + s
 	~/Dotfiles/modes/switch_standby.sh
 super + ctrl + b
 	~/Dotfiles/modes/switch_battle.sh
+
+#send to scratch pad
+super + z
+	id=$(bspc query -N -n "focused");\
+	if [ -n "$id" ];then \
+		xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+		bspc node -t "floating";\
+		 xdotool windowunmap $id;\
+	fi
+
+#toggle/cycle scratch windows
+super + x
+    i=$(bspc query -W -w "focused.floating");\
+    if [ -n "$i" ];then \
+        xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+        xdotool windowunmap $i;\
+    else;\
+        i=`for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
+            t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
+            if [ -n "$t" ];then \
+                echo $t $w;\
+            fi;\
+           done|sort -n|head -n1|cut -d" " -f 5`;\
+        if [ -n "$i" ];then \
+            xprop -id $i -remove _SCRATCH;\
+            bspc rule -a \* state=floating center=true --one-shot;\
+            xdotool windowmap $i;\
+            bspc window -f $i;\
+        fi;\
+    fi
 
 
 ####
@@ -76,6 +106,7 @@ super + y
 # swap the current node and the biggest node
 super + g
 	bspc node -s biggest
+
 
 #
 # state/flags
