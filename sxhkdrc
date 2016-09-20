@@ -30,9 +30,12 @@ super + l
 	setxkbmap us && i3lock -i ~/Dotfiles/media/lock.png
 ~button1
 	bspc pointer -g focus
+XF86Launch4
+	setxkbmap us
+super + XF86Launch4
+	setxkbmap us -variant colemak
 
 # modes
-
 super + ctrl + s
 	~/Dotfiles/modes/switch_standby.sh
 super + ctrl + b
