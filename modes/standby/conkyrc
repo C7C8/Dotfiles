@@ -38,6 +38,7 @@ TEXT
 ${font sans-serif:bold:size=10}'sourec@$nodename'
 ${font sans-serif:bold:size=8}STORAGE ${hr 2} ${font sans-serif:normal:size=8}
  ${color #000000}/              $color${fs_used /}/${fs_size /}${alignr}${color #000000}${alignr}${fs_bar 5,81 /}
+ ${color #000000}/home		$color${fs_used /home}/${fs_size /home}${alignr}${color #000000}${alignr}${fs_bar 5,81 /home}
 
 ${font sans-serif:bold:size=8}CPU/MEM ${hr 2} ${font sans-serif:normal:size=8}
 ${color #000000}CPU:$color ${cpu}% ${color #000000}${cpubar 5,85}    ${color #000000}Disk I/O: $color${diskio}
@@ -56,10 +57,10 @@ ${font Courier 10 Pitch:size=8}$color ${top_mem name 1} ${top_mem pid 1} ${top_m
 $color ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
 $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
-${font sans-serif:bold:size=8}WIRELESS (wlan1) - ${addr wlan1} ${hr 2} ${font sans-serif:normal:size=8}
-${font sans-serif:bold:size=6}eth1 - ${addr eth1} ${font sans-serif:normal:size=8}
-${color #000000}Net Down:$color ${downspeed wlan1} k/s ${alignr}${color #000000}Net Up:$color ${upspeed wlan1} k/s
-${color #000000}${downspeedgraph wlan1 18,128 104E8B 000000} $alignr${color #000000}${upspeedgraph wlan1 18,128 104E8B 000000}
+${font sans-serif:bold:size=8}WIRELESS (wlp2s0) - ${addr wlp2s0} ${hr 2} ${font sans-serif:normal:size=8}
+${font sans-serif:bold:size=6}enp1s0 - ${addr enp1s0} ${font sans-serif:normal:size=8}
+${color #000000}Net Down:$color ${downspeed wlp2s0} k/s ${alignr}${color #000000}Net Up:$color ${upspeed wlp2s0} k/s
+${color #000000}${downspeedgraph wlp2s0 18,128 104E8B 000000} $alignr${color #000000}${upspeedgraph wlp2s0 18,128 104E8B 000000}
 ${color #000000}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}
 ${color #000000}Inbound Connections ${alignr} Local Service/Port$color
@@ -79,8 +80,8 @@ ${font sans-serif:normal:size=8}${color #000000}Outbound Connections ${alignr} R
 
 
 
-
 ${color #00aaaa}
 ${goto 5}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
 ${goto 5}${font sans-serif:normal:size=12}${time %A, %B %d %Y}${color #ffffff}
-               ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
+               
+	       ${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
