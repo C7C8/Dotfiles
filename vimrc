@@ -7,6 +7,8 @@ set backspace=indent,eol,start
 set number
 set ruler
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+execute pathogen#infect()
+filetype plugin indent on
 
 "For Vim-LaTeX plugin
 filetype plugin on
