@@ -25,6 +25,8 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>}', 'tex')
 	au VimEnter * call IMAP('INT', '\int\limits_{<++>}^{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>} <++>', 'tex') 
+	au VimEnter * call IMAP('BSK', '\bigskip <++>', 'tex')
+	au VimEnter * call IMAP('ABS', '\lvert <++> \rvert <++>', 'tex')
 augroup END
 
 
