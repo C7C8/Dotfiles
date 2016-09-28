@@ -1,86 +1,19 @@
-super + Return
-	terminator
+#
+# SXHKD CONTROLS
+#
+# These controls manipulate most things on my system, designation
+# lazarus3 (make of that symbolism whatever you want...). They are
+# approximately ordered by criticality: core commands are first,
+# WM controls, launchers, etc.
+#
+#
+
+
+# Launch a terminal. End-all fix-all for the worst
+# things that could possibly happen.
 XF86Launch3
 	terminator
-super + d
-	synapse
-super + ctrl + f
-	pcmanfm -n
-super + ctrl + v
-	gvim
-super + ctrl + m
-	pcmanfm -n ~/Music & vlc
-super + ctrl + p
-	pavucontrol
-super + ctrl + w
-	gnome-control-center network
-super + ctrl + r 
-	gnome-sound-recorder
-F1
-	light -U 10
-F2
-	light -A 10
-{F11, XF86AudioPrev}
-	amixer -D pulse sset Master 5%-
-{F12, XF86AudioNext}
-	amixer -D pulse sset Master 5%+
-{F10, XF86AudioStop}
-	amixer -D pulse sset Master 0%
-super + l
-	setxkbmap us && i3lock -i ~/Dotfiles/media/lock.png
-~button1
-	bspc pointer -g focus
-XF86Launch4
-	setxkbmap us
-super + XF86Launch4
-	setxkbmap us -variant colemak
 
-# modes
-super + ctrl + s
-	~/Dotfiles/modes/switch_standby.sh
-super + ctrl + b
-	~/Dotfiles/modes/switch_battle.sh
-
-#send to scratch pad
-super + z
-	id=$(bspc query -N -n "focused");\
-	if [ -n "$id" ];then \
-		xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-		bspc node -t "floating";\
-		 xdotool windowunmap $id;\
-	fi
-
-#toggle/cycle scratch windows
-super + x
-    i=$(bspc query -W -w "focused.floating");\
-    if [ -n "$i" ];then \
-        xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-        xdotool windowunmap $i;\
-    else;\
-        i=`for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
-            t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
-            if [ -n "$t" ];then \
-                echo $t $w;\
-            fi;\
-           done|sort -n|head -n1|cut -d" " -f 5`;\
-        if [ -n "$i" ];then \
-            xprop -id $i -remove _SCRATCH;\
-            bspc rule -a \* state=floating center=true --one-shot;\
-            xdotool windowmap $i;\
-            bspc window -f $i;\
-        fi;\
-    fi
-
-
-####
-# Soundboard stuff
-super + shift + ctrl + s
-	play -v 35 ~/Dotfiles/soundboard/cymcrash.ogg
-
-
-
-####
-####
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -192,4 +125,64 @@ super + alt + shift + {Left, Down, Up, Right}
 # move a floating window
 super + ctrl + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+#
+# CUSTOM APPLICATION LAUNCHERS AND HOTKEYS
+#
+
+super + Return				# Launch a terminal. Retained due to legacy.
+	terminator
+super + d
+	synapse				# Launch application launcher, synapse. (TODO: Switch!)
+super + ctrl + f
+	pcmanfm -n			# Launch file manager. -n creates new window
+super + ctrl + v
+	gvim				# Launch text editor
+super + ctrl + m
+	pcmanfm -n ~/Music & vlc	# Prep music environment - open folder to ~/Music and run VLC.
+super + ctrl + p
+	pavucontrol			# Launch Pulse Audio Control.
+super + ctrl + w
+	gnome-control-center network	# Launch network manager (TODO: Switch!)
+super + ctrl + r 
+	gnome-sound-recorder		# Launch sound recorder, in case nasty things pop u.
+F1
+	light -U 10			# Increase backlight by 10%. Fn key not needed.
+F2
+	light -A 10			# Decrease backlight by 10%. Fn key not needed.
+{F11, XF86AudioPrev}
+	amixer -D pulse sset Master 5%-	# Decrease volume by 5%
+{F12, XF86AudioNext}
+	amixer -D pulse sset Master 5%+	# Increase volume by 5%
+{F10, XF86AudioStop}
+	amixer -D pulse sset Master 0%	# Mute audio
+super + l
+	setxkbmap us && i3lock -i ~/Dotfiles/media/lock.png	# Lock screen and revert to QWERTY standard keyboard.
+~button1
+	bspc pointer -g focus		# Focus window that was clicked on.
+XF86Launch4
+	setxkbmap us			# Set keyboard to QWERTY standard keyboard.
+super + XF86Launch4
+	setxkbmap us -variant colemak	# Set keyboard to Colemak keyboard.
+
+
+#
+# UX MODES
+#
+
+super + ctrl + s
+	~/Dotfiles/modes/switch_standby.sh	# Switch to standby (normal) mode.
+super + ctrl + b
+	~/Dotfiles/modes/switch_battle.sh	# Switch to battle mode.
+
+
+#
+# MISC. SOUNDBOARD STUFF 
+# (for no particular reason)
+#
+
+super + shift + ctrl + s
+	play -v 35 ~/Dotfiles/soundboard/cymcrash.ogg
+
 
