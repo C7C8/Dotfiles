@@ -20,6 +20,7 @@ let g:tex_flavor='latex'
 augroup MyIMAPs
 	au!
 	au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
+	au VimEnter * call IMAP('PRD', '\prod\limits_{<++>}^{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('LIM', '\lim\limits_{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('INF', '\infty', 'tex')
 	au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>}', 'tex')
