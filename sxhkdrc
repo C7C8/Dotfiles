@@ -131,6 +131,8 @@ super + ctrl + f
 	pcmanfm -n
 super + ctrl + v
 	gvim
+super + ctrl + d
+	gvim && bspc node -p south && bspc node -o 0.8 && terminator
 super + ctrl + m
 	pcmanfm -n ~/Music & vlc
 super + ctrl + p
