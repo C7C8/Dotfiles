@@ -23,7 +23,7 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('PRD', '\prod\limits_{<++>}^{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('LIM', '\lim\limits_{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('INF', '\infty', 'tex')
-	au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>}', 'tex')
+	au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>} <++>', 'tex')
 	au VimEnter * call IMAP('INT', '\int\limits_{<++>}^{<++>} <++>', 'tex')
 	au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>} <++>', 'tex') 
 	au VimEnter * call IMAP('BSK', '\bigskip <++>', 'tex')
