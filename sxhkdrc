@@ -130,9 +130,27 @@ super + d
 super + ctrl + f
 	pcmanfm -n
 super + ctrl + v
-	gvim
-super + ctrl + d
-	gvim && bspc node -p south && bspc node -o 0.8 && terminator
+	gvim -c "call ToggleGUI()"
+super + ctrl + shift + d 
+	gvim -c "call ToggleGUI()"&& \
+	gvim -c "call ToggleGUI()" && \
+	bspc node -p south && \
+	gvim -c "call ToggleGUI()" && \
+	bspc node -f east && \
+	bspc node -p south && \
+	gvim -c "call ToggleGUI()" && \
+	bspc node -f @parent && \
+	bspc node -f @parent && \
+	bspc node -p south && \
+	bspc node -o 0.9 && \
+	terminator
+super + ctrl + d 
+	gvim -c "call ToggleGUI()" && \
+	gvim -c "call ToggleGUI()" && \
+	bspc node -f @parent && \
+	bspc node -p south && \
+	bspc node -o 0.9 && \
+	terminator
 super + ctrl + m
 	pcmanfm -n ~/Music & vlc
 super + ctrl + p
@@ -152,11 +170,11 @@ F2
 {F10, XF86AudioStop}
 	amixer -D pulse sset Master 0%
 super + l
-	setxkbmap us && i3lock -i ~/Dotfiles/media/lock.png
+	i3lock -i ~/Dotfiles/media/lock.png
 XF86Launch4
-	setxkbmap us
-super + XF86Launch4
 	setxkbmap us -variant colemak
+super + XF86Launch4
+	setxkbmap us
 
 
 #

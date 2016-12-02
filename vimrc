@@ -1,4 +1,3 @@
-syntax on
 set autoindent
 set nowrap
 set hlsearch
@@ -9,6 +8,21 @@ set ruler
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 execute pathogen#infect()
 filetype plugin indent on
+
+"Color stuff
+syntax enable
+set background=dark
+colorscheme solarized
+
+
+"gvim 'fullscreen' mode
+function! ToggleGUI()
+  if &guioptions=='i'
+    exec('set guioptions=imTrL')
+  else
+    exec('set guioptions=i')
+  endif
+endfunction
 
 "For Vim-LaTeX plugin
 filetype plugin on
@@ -28,6 +42,7 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>} <++>', 'tex') 
 	au VimEnter * call IMAP('BSK', '\bigskip <++>', 'tex')
 	au VimEnter * call IMAP('ABS', '\lvert <++> \rvert <++>', 'tex')
+	au VimEnter * call IMAP('PDV', '\frac{\delta <++>}{\delta <++>} <++>', 'tex')
 augroup END
 
 
