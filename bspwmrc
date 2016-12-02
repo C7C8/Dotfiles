@@ -1,6 +1,10 @@
 #! /bin/sh
 xset -b
+
+#Misc keyboard stuff, since keyboards are stupid and my hands are worse
 setxkbmap -option caps:backspace
+xmodmap -e "keycode 105 = Escape" #alt-gr
+xmodmap -e "keycode 108 = Escape" #rctrl
 
 sxhkd &
 
