@@ -43,6 +43,10 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('BSK', '\bigskip <++>', 'tex')
 	au VimEnter * call IMAP('ABS', '\lvert <++> \rvert <++>', 'tex')
 	au VimEnter * call IMAP('PDV', '\frac{\delta <++>}{\delta <++>} <++>', 'tex')
+	au VimEnter * call IMAP('NOT', '\neg <++>', 'tex')
+	au VimEnter * call IMAP('AND', '\wedge <++>', 'tex')
+	au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
+	au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
 augroup END
 
 

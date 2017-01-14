@@ -16,7 +16,7 @@
 # Launch a terminal. End-all fix-all for the worst
 # things that could possibly happen.
 XF86Launch3
-	terminator
+	gnome-terminal
 
 # Quit bspwm normally.
 super + alt + Escape
@@ -124,7 +124,7 @@ super + ctrl + {h,j,k,l}
 # HOTKEYS
 
 super + Return
-	terminator
+	gnome-terminal
 super + d
 	synapse
 super + ctrl + f
@@ -143,14 +143,14 @@ super + ctrl + shift + d
 	bspc node -f @parent && \
 	bspc node -p south && \
 	bspc node -o 0.9 && \
-	terminator
+	gnome-terminal
 super + ctrl + d 
 	gvim -c "call ToggleGUI()" && \
 	gvim -c "call ToggleGUI()" && \
 	bspc node -f @parent && \
 	bspc node -p south && \
 	bspc node -o 0.9 && \
-	terminator
+	gnome-terminal
 super + ctrl + m
 	pcmanfm -n ~/Music & vlc
 super + ctrl + p
