@@ -1,0 +1,69 @@
+alignment top_left
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color grey
+double_buffer yes
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+gap_x 15
+gap_y 0
+maximum_width 1366
+max_port_monitor_connections 64
+max_specials 512
+max_user_text 16384
+minimum_size 330 10
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+wm_class_name Conky
+own_window_colour black
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent no
+own_window_type normal
+own_window no
+stippled_borders 0
+update_interval 1
+uppercase no
+use_spacer yes
+use_xft yes
+xftalpha 0.8
+xftfont  BankGothic Md BT:size=9
+
+TEXT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+${color green}
+${goto 1125}${top name 1}${goto 1270}${top cpu 1}
+${goto 1125}${top name 2}${goto 1270}${top cpu 2}${goto 500}CPU ${cpu}%
+${goto 1125}${top name 3}${goto 1270}${top cpu 3}
+${goto 1125}${top name 4}${goto 1270}${top cpu 4}${goto 375}RAM ${mem}${goto 900}BAT ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"}
+${color white}
+

@@ -16,7 +16,7 @@
 # Launch a terminal. End-all fix-all for the worst
 # things that could possibly happen.
 XF86Launch3
-	gnome-terminal
+	terminator
 
 # Quit bspwm normally.
 super + alt + Escape
@@ -124,7 +124,7 @@ super + ctrl + {h,j,k,l}
 # HOTKEYS
 
 super + Return
-	gnome-terminal
+	terminator
 super + d
 	synapse
 super + ctrl + f
@@ -143,38 +143,33 @@ super + ctrl + shift + d
 	bspc node -f @parent && \
 	bspc node -p south && \
 	bspc node -o 0.9 && \
-	gnome-terminal
+	terminator
 super + ctrl + d 
 	gvim -c "call ToggleGUI()" && \
 	gvim -c "call ToggleGUI()" && \
 	bspc node -f @parent && \
 	bspc node -p south && \
 	bspc node -o 0.9 && \
-	gnome-terminal
+	terminator
 super + ctrl + m
 	pcmanfm -n ~/Music & vlc
 super + ctrl + p
 	pavucontrol
 super + ctrl + w
-	gnome-control-center network
-super + ctrl + r
-	gnome-sound-recorder
-F1
+	wicd-gtk
+XF86MonBrightnessDown
 	light -U 10
-F2
+XF86MonBrightnessUp
 	light -A 10
-{F11, XF86AudioPrev}
+XF86AudioLowerVolume
 	amixer -D pulse sset Master 5%-
-{F12, XF86AudioNext}
+XF86AudioRaiseVolume
 	amixer -D pulse sset Master 5%+
-{F10, XF86AudioStop}
+XF86AudioMute
 	amixer -D pulse sset Master 0%
 super + m
 	i3lock -i ~/Dotfiles/media/lock.png
-XF86Launch4
 	setxkbmap us -variant colemak
-super + XF86Launch4
-	setxkbmap us
 
 
 #
@@ -185,7 +180,8 @@ super + ctrl + s
 	~/Dotfiles/modes/switch_standby.sh
 super + ctrl + b
 	~/Dotfiles/modes/switch_battle.sh
-
+super + ctrl + shift + f
+	~/Dotfiles/modes/switch_freespace.sh
 
 #
 # MISC. SOUNDBOARD STUFF 

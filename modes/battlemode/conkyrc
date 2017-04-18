@@ -53,9 +53,9 @@ ${goto 194}${cpugraph 0 24,128 440000 dd0000}
 
 ${goto 20}BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Full)" | grep -Po "\d+%"}
 
-${goto 180}wlp2s0: ${addr wlp2s0}
-${goto 180}${downspeedgraph wlp2s0 24,128 440000 dd0000}
-${goto 180}D: ${downspeed wlp2s0} U: ${upspeed wlp2s0}
+${goto 180}wlo1: ${addr wlo1}
+${goto 180}${downspeedgraph wlo1 24,128 440000 dd0000}
+${goto 180}D: ${downspeed wlo1} U: ${upspeed wlo1}
 
 
 

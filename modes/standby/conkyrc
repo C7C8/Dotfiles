@@ -57,10 +57,10 @@ ${font Courier 10 Pitch:size=8}$color ${top_mem name 1} ${top_mem pid 1} ${top_m
 $color ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
 $color ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
-${font sans-serif:bold:size=8}WIRELESS (wlp2s0) - ${addr wlp2s0} ${hr 2} ${font sans-serif:normal:size=8}
-${font sans-serif:bold:size=6}enp1s0 - ${addr enp1s0} ${font sans-serif:normal:size=8}
-${color #FFFFFF}Net Down:$color ${downspeed wlp2s0} k/s ${alignr}${color #FFFFFF}Net Up:$color ${upspeed wlp2s0} k/s
-${color #FFFFFF}${downspeedgraph wlp2s0 18,128 104E8B FFFFFF} $alignr${color #FFFFFF}${upspeedgraph wlp2s0 18,128 104E8B FFFFFF}
+${font sans-serif:bold:size=8}WIRELESS (wlo1) - ${addr wlo1} ${hr 2} ${font sans-serif:normal:size=8}
+${font sans-serif:bold:size=6}eno1 - ${addr eno1} ${font sans-serif:normal:size=8}
+${color #FFFFFF}Net Down:$color ${downspeed wlo1} k/s ${alignr}${color #FFFFFF}Net Up:$color ${upspeed wlo1} k/s
+${color #FFFFFF}${downspeedgraph wlo1 18,128 104E8B FFFFFF} $alignr${color #FFFFFF}${upspeedgraph wlo1 18,128 104E8B FFFFFF}
 ${color #FFFFFF}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr} ALL: ${tcp_portmon 1 65535 count}
 ${color #FFFFFF}Inbound Connections ${alignr} Local Service/Port$color
@@ -84,5 +84,5 @@ ${color #00aaaa}
 ${goto 5}${font sans-serif:bold:size=28}${exec date +"%I:%M %p" | grep -Po "[1-9]{1}.*"}
 ${goto 5}${font sans-serif:normal:size=12}${time %A, %B %d %Y}${color #ffffff}              
 
-	${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
+${font sans-serif:normal:size=8}♪ ${exec amixer get Master | grep 'Front Left' | grep -Po '\d+\%'} | BAT: ${exec acpi -V | grep -P "Battery\s0:\s(Cha|Dis|Ful)" | grep -Po "\d+%"} | ${exec date +"%I:%M %p"}
 
