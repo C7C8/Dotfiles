@@ -48,8 +48,8 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
 	au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
 	au VimEnter * call IMAP('LCASE', '\subsection{\textit{<++>} (<++>)}<++>', 'tex')
-	au VimEnter * call IMAP('MAT', '\begin{smallmatrix} <++> \end{smallmatrix}', 'tex')
-	au VimEnter * call IMAP('MLT', '\begin{bmatrix} <++> \end{bmatrix}', 'tex')
+	au VimEnter * call IMAP('MAT', '\begin{smallmatrix} <++> \end{smallmatrix}<++>', 'tex')
+	au VimEnter * call IMAP('MLT', '\begin{bmatrix} <++> \end{bmatrix}<++>', 'tex')
 augroup END
 
 
