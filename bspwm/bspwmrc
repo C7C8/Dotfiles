@@ -1,1 +1,32 @@
-#!/bin/zsh
+#!/bin/sh
+
+# This file is run when BSPWM starts, or when the display
+# manager (SLIM) launches it. Consequently, it's a good
+# place for a whole lot of init stuff.
+
+# Start hotkey daemon in the background
+sxhkd &
+
+
+# Keyboard settings
+setxkbmap -option caps:backspace
+xmodmap -e "keycode 105 = Escape"	# alt-gr -> esc, for vim
+
+
+# Monitor stuff, hope this works!
+bspc monitor DP1 -d I II III IV V VI VIII IX X # TODO: FIND THE RIGHT NAMES FOR MONITORS
+bspc monitor DP2 -d XI XII XIII XIV XV XVI XVII XVIII XIX XX
+
+bspc config border_width	1
+
+bspc config window_gap		5
+bspc config bottom_padding	0
+bspc config top_padding		0
+bspc config right_padding	0
+bspc config left_padding	0
+
+bspc config split_ratio		0.5
+bspc history_aware_focus	true
+bspc config click_to_focus	true
+
+
