@@ -1,2 +1,3 @@
 [dotrix.link]
-".viminfo" = "viminfo"
+".vimrc" = "vimrc"
+".gvimrc" = "gvimrc"
