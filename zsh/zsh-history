@@ -1,0 +1,43 @@
+ls -a
+less .zcompdump
+cd Dotfiles
+ls
+cd zsh
+touch dot.toml
+mv ~/.z* .
+ls
+ls -a
+mv .zcompdump zcompdump
+mv .zshrc zshrc
+touch zsh-history
+vim zshrc
+ls
+vim dot.toml
+ls
+vim dot.toml
+ls
+cd ..
+cd ..
+ls
+ls
+dotrix -h
+dotrx --src Dotfiles -d
+dotrix --src Dotfiles -d
+dotrix --src Dotfiles
+ls -a
+cd Dotfiles/vim
+vim dot.toml
+mv ~/.viminfo viminfo
+ls
+cd ..
+cd ..
+dotrix --src Dotfiles
+less .zsh-history
+less .zshrc
+yaourt -Ss slim
+pacman -Ss slim
+sudo yaourt -S slim slim-themes
+ls
+ls -a
+less .zsh-history
+exit
