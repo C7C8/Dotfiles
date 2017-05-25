@@ -4,10 +4,6 @@
 # manager (SLIM) launches it. Consequently, it's a good
 # place for a whole lot of init stuff.
 
-# Start hotkey daemon in the background
-sxhkd &
-
-
 # Keyboard settings
 setxkbmap -option caps:backspace
 xmodmap -e "keycode 105 = Escape"	# alt-gr -> esc, for vim
