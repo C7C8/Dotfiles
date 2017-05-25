@@ -1,0 +1,112 @@
+#
+# SXHKD Controls
+#
+# These ctrls manipulate most things on the sathanas
+# system. Messing with this file can have severe consequences,
+# as you'll be unable to do many desktop things, like launch
+# applications or move windows. That being said, it is well
+# worth it. Good luck!
+#
+
+# =============================
+# CRITICAL COMMANDS
+
+# Last line of defense against the worst things in the universe (launch a terminal!)
+super + enter
+	termite
+
+# Close selected window
+super + shift + q
+	bspc node -c
+
+# Quit bspwm
+super + alt + escape
+	bspc quit
+
+# Reload sxhkd config files
+super + escape
+	pkill -USR1 -x sxhkd
+
+
+# =============================
+# FOCUS COMMANDS
+# (select things)
+
+# Focus or send window to desktop
+super + {_, shift +}{1-9,0}
+	bspc {desktop -f, node -d} '^{1-9,10}'
+
+
+# Focus or move window in direction
+super + {_,shift +_}{h, j, k, l}
+	bspc node -{f,s} {west, south, north, east}
+
+# Select monitor in direction
+super + alt + {h, l}
+	bspc monitor {west, east}
+
+
+# =============================
+# LAYOUT COMMANDS
+# (move things around)
+
+# Swap current window with the biggest window
+super + shift + g
+	bspc node -s biggest
+
+# Rotate windows
+super + shift + r
+	bspc node -R 90
+
+# Mirror or flip leaves in bspwm's tree of windows
+super + shift + {comma, period}
+	bspc node -F {vertical, horizontal}
+
+# =============================
+# SIZING COMMANDS
+# (change how big things are)
+
+# Expand window in direction
+super + alt + {h, j, k, l}
+	bspc node -z {left -20 0, bottom 0 20, top 0 -20, right 20 0}
+
+# Contract window in direction
+super + alt + shift + {h, j, k, l}
+	bspc node -z {right -20 0, top 0 20, bottom 0 -20, left 20 0}
+
+# =============================
+# PRESELECTION COMMANDS
+# (decide where things should go before they exist}
+
+# Preselect direction
+super + ctrl + {h, j, k, l}
+	bspc node -p {west, south, north, east}		
+
+# Preselect ratio of new window
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Cancel preselection
+super + ctrl + space
+	bspc node -p cancel
+
+
+# =============================
+# LAUNCHERS
+# (stuff that I should have quick access to)
+
+super + d
+	rofi	
+super + ctrl + f
+	pcmanfm -n
+super + ctrl + v
+	gvim
+super + ctrl + m
+	pcmanfm -n ~/Music & vlc
+super + ctrl + p
+	pavucontrol
+super + ctrl + w
+	gnome-control-center network
+super + m
+	i3lock
+	
