@@ -5,15 +5,14 @@
 # place for a whole lot of init stuff.
 
 # Keyboard settings
-feh --bg-scale ~/Conky.png
 setxkbmap -option caps:backspace
 xmodmap -e "keycode 105 = Escape"	# alt-gr -> esc, for vim
 
 sxhkd -r ~/test.txt &
 
 # Monitor stuff, hope this works!
-bspc monitor DP1 -d I II III IV V VI VIII IX X # TODO: FIND THE RIGHT NAMES FOR MONITORS
-bspc monitor DP2 -d XI XII XIII XIV XV XVI XVII XVIII XIX XX
+bspc monitor DP-2 -d I II III IV V 
+bspc monitor DP-4 -d VI VII VIII IX X
 
 bspc config border_width	1
 
