@@ -96,7 +96,7 @@ super + ctrl + space
 # (stuff that I should have quick access to)
 
 super + d
-	rofi	
+	rofi -show run
 super + ctrl + f
 	pcmanfm -n
 super + ctrl + v
