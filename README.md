@@ -1,7 +1,7 @@
-# Sourec Dotfiles, Sathanas-grade
+# Sourec Dotfiles (sathanas)
 
-These are my (Sourec) dotfiles, sathanas-grade. That means
-that they're designed to be used on a FAST system with a full+
+These are my dotfiles, sathanas-grade. That means
+that they're designed to be used on a fast system with a full+
 keyboard, not an ancient laptop like the other branch. Assume a
 desktop build with a number pad and two screens.
 
