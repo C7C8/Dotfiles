@@ -1,38 +1,18 @@
-# Sourec Dotfiles
+# Sourec Dotfiles (*Moloch*)
 
 These files are my dotfiles for my own personal use. They are published here
-so that others may use my files as they wish for their own purposes. Note that
+so that others may use them as they wish. Note that
 they are my own personal files, and as such contain personalized controls,
-settings, and system-specific configuration. I offer no assistance in getting
+settings, and system-specific configurations. I offer no assistance in getting
 these files to work -- if these files don't work for you, I expect you to know
 how to make them work.
 
-## Requirements
-* i3
-* i3blocks
-* Conky
-* bspwm
-* bspc
-* sxhkd
-* acpi
-
-## Optional
-These are referenced in i3/config, but are not necessary for functionality.
-* i3lock
-* PCManFM
-* Synapse
-
-## Installation 
-I won't give full installation instructions here due to the variety of configurations
-across systems (and admittedly my own unwillingness to do so), but here is a rough
-listing of files I have symlinked to this Dotfiles folder. I expect that you'll know
-where the appropriate links should go.
-
-* bspwmrc
-* sxhkdrc
-* vim
-* vimrc
-* i3
+This branch's files are oriented towards what I have designated *Moloch*-grade
+systems, or light laptops with little processing power. As such, there is an
+emphasis on performance and power usage over asthetics. My naming convention
+is based on the names of Shivan capital ships from the *Freespace 2* universe:
+a *Moloch* is a light corvette, a *Sathanas* is a juggernaut, a *Ravana* is
+a destroyer, etc.
 
 ## License Note
 Not all files here are my own, and as such the license found in LICENSE.md (GPLv3) doesn't apply to those. For reference, those files are:
