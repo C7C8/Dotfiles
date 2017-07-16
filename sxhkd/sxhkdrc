@@ -45,6 +45,10 @@ super + {_,shift +_}{h, j, k, l}
 super + alt + {h, l}
 	bspc monitor {west, east}
 
+# Focus by path
+super + {a, b}
+	bspc node -f @{parent,brother}
+
 
 # =============================
 # LAYOUT COMMANDS
@@ -61,6 +65,10 @@ super + shift + r
 # Mirror or flip leaves in bspwm's tree of windows
 super + shift + {comma, period}
 	bspc node -F {vertical, horizontal}
+
+# Move floating windows around
+super + ctrl + {h, j, k, l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # =============================
 # SIZING COMMANDS
@@ -113,4 +121,6 @@ super + ctrl + w
 	gnome-control-center network
 super + m
 	i3lock
+XF86Audio{LowerVolume,RaiseVolume}
+	pamixer -{d,i} 3 
 	
