@@ -1,2 +1,5 @@
 [dotrix.link]
 ".zshrc" = "zshrc"
+
+[dotrix]
+ignore = [ "powerlevel9k" ]

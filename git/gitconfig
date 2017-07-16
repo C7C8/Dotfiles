@@ -1,3 +1,29 @@
 [user]
-	email = tothemyers@gmail.com
 	name = Sourec
+	email = tothemyers@gmail.com
+	signingkey = 6ABAC5024CBA3FB479DD1520FC9F79D941B4020E
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = /home/sourec/.gitignore_global
+	editor = vim
+[push]
+	default = simple
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[difftool "meld"]
+	cmd = meld $LOCAL $REMOTE
+[credential]
+	helper = cache --timeout 86400
+[alias]
+	fuck = reset --hard HEAD
+	unstage = reset
+	ada = add --all
+	coms = commit -S
+	logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --date-order
+	com = commit -m
+	st = status -sb
+	quamend = commit -S --amend --no-edit
+
