@@ -1,3 +1,1 @@
-sxhkd &
-exec bspwm &
-compton --config .config/compton/compton.conf -b
+sxhkd & exec bspwm

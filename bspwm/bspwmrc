@@ -3,6 +3,8 @@
 # This file is run when BSPWM starts, or when the display
 # manager (SLIM) launches it. Consequently, it's a good
 # place for a whole lot of init stuff.
+compton --config .config/compton/compton.conf -b
+xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 
 # Keyboard settings
 setxkbmap -option caps:backspace
