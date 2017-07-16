@@ -41,10 +41,6 @@ super + {_, shift +}{1-9,0}
 super + {_,shift +_}{h, j, k, l}
 	bspc node -{f,s} {west, south, north, east}
 
-# Select monitor in direction
-super + alt + {h, l}
-	bspc monitor {west, east}
-
 # Focus by path
 super + {a, b}
 	bspc node -f @{parent,brother}
@@ -67,7 +63,7 @@ super + shift + {comma, period}
 	bspc node -F {vertical, horizontal}
 
 # Move floating windows around
-super + ctrl + {h, j, k, l}
+super + shift + ctrl + {h, j, k, l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # =============================
@@ -90,10 +86,6 @@ super + {t, shift + t, s, f}
 # PRESELECTION COMMANDS
 # (decide where things should go before they exist}
 
-# Preselect direction
-super + ctrl + {h, j, k, l}
-	bspc node -p {west, south, north, east}		
-
 # Preselect ratio of new window
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -102,6 +94,9 @@ super + ctrl + {1-9}
 super + ctrl + space
 	bspc node -p cancel
 
+# Preselect direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
 
 # =============================
 # LAUNCHERS
