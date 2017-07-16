@@ -39,3 +39,10 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+function sprep() {
+	echo "Lazy bastard..."
+	eval `ssh-agent` > /dev/null
+	sleep 0.5
+	ssh-add ~/.ssh/id_rsa.1 > /dev/null 2>&1
+}
