@@ -1,15 +1,41 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh-history
-HISTSIZE=1000
-SAVEHIST=1000000
-setopt appendhistory autocd extendedglob nomatch notify
-unsetopt beep
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/sourec/.zshrc'
+export TERM="xterm-256color"
+export ZSH=/home/sourec/.oh-my-zsh
+source dotfiles/zsh/powerlevel9k/powerlevel9k.zsh-theme # theme
+HYPHEN_INSENSITIVE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+source $ZSH/oh-my-zsh.sh
+source /etc/profile.d/autojump.zsh
+plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools)
 
-autoload -Uz compinit
-compinit
+# Misc config 
+export ARCHFLAGS="-arch x86_64"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-alias ls="ls --color=auto"
+# Less settings
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+
+# Not my script, it's from http://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
+# I just find it useful
+function countdown(){
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+   beep -f 440 -l 500
+}
+function stopwatch(){
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 0.1
+   done
+}
