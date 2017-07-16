@@ -1,17 +1,12 @@
-Fix sxhkd controls
-Fix bspwm multi monitor
-Get click-to-focus bspwm working
-Set 144 fps default (somehow...)
 Create knowledge base (something wiki-like?)
 Get mouse theme
 Set default font (FS2 font everywhere, inconsolata for terminal)
 Install oh-my-zsh
 Customize zsh
 Install git stuff
-Customize vim (a LOT, and make it actually work...)
-Make rofi good looking again
+Customize vim (a LOT, and make it actually work without kludges)
+Make rofi look good again
 Install + setup thunderbird (sync?)
-Configure fstab to load storage55-home, symlink some things (music, PGP, email...)
 Make the bootup process look prettier (remove loglevel?)
 Create new rEFInd theme
 Install conky, write setup from scratch
