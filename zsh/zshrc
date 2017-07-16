@@ -11,4 +11,5 @@ zstyle :compinstall filename '/home/sourec/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+alias ls="ls --color=auto"

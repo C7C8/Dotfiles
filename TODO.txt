@@ -1,5 +1,3 @@
-Get mouse theme
-Set default font (FS2 font everywhere, inconsolata for terminal)
 Install oh-my-zsh
 Customize zsh
 Install git stuff
