@@ -1,4 +1,3 @@
-Customize vim (a LOT, and make it actually work without kludges)
 Make rofi look good again
 Install + setup thunderbird (sync?)
 Make the bootup process look prettier (remove loglevel?)

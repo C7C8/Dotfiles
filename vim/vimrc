@@ -1,0 +1,48 @@
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+let g:clang_library_path='/usr/lib/libclang.so'
+let g:ycm_server_python_interpreter='/usr/bin/python2'
+
+set autoindent
+set nowrap
+set hlsearch
+set nocp
+set backspace=indent,eol,start
+set number
+set ruler
+au BufNewFile,BufRead *.cpp set syntax=cpp11
+
+syntax enable
+set background=dark
+
+" gvim fullscreen mode
+function! ToggleGUI()
+  if &guioptions=='i'
+    exec('set guioptions=imTrL')
+  else
+    exec('set guioptions=i')
+  endif
+endfunction
+call ToggleGUI()
+
+" vim-latex stuff?
+let g:tex_flavor='latex'
+augroup MyIMAPs
+        au!
+        au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('PRD', '\prod\limits_{<++>}^{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('LIM', '\lim\limits_{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('INF', '\infty', 'tex')
+        au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>} <++>', 'tex')
+        au VimEnter * call IMAP('INT', '\int\limits_{<++>}^{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('BSK', '\bigskip <++>', 'tex')
+        au VimEnter * call IMAP('ABS', '\lvert <++> \rvert <++>', 'tex')
+        au VimEnter * call IMAP('PDV', '\frac{\delta <++>}{\delta <++>} <++>', 'tex')
+        au VimEnter * call IMAP('NOT', '\neg <++>', 'tex')
+        au VimEnter * call IMAP('AND', '\wedge <++>', 'tex')
+        au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
+        au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
+augroup END
