@@ -32,10 +32,13 @@ super + Escape
 # FOCUS COMMANDS
 # (select things)
 
-# Focus or send window to desktop
+# Focus or send window to desktop on monitor one
 super + {_, shift +}{1-9,0}
 	bspc {desktop -f, node -d} '^{1-9,10}'
 
+#Focus or send window to desktop on monitor two
+super + alt + {_, shift +}{1-9,0}
+	bspc {desktop -f, node -d} '^{11-19,20}'
 
 # Focus or move window in direction
 super + {_,shift +_}{h, j, k, l}
