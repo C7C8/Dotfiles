@@ -1,2 +1,5 @@
 [dotrix.link]
 ".config/bspwm/bspwmrc" = "bspwmrc"
+
+[dotrix]
+ignore = [ "space-shuttle-simple.jpg" ]
