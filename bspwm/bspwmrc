@@ -7,12 +7,13 @@ compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 
 # Keyboard settings
-setxkbmap -option caps:backspace
-xmodmap -e "keycode 105 = Escape"	# alt-gr -> esc, for vim
+setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?)
+xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
 
 # Monitor stuff, hope this works!
 bspc monitor DP-2 -d I II III IV V
 bspc monitor DP-0 -d VI VII VIII IX X
+bspc monitor '^1' -s '^2' # Check BSPWM issue #417 on github... I hate sorcery.
 
 # Layoutish stuff
 bspc config border_width	3
