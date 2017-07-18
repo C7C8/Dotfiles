@@ -1,10 +1,10 @@
 Make rofi look good again
-Install + setup thunderbird (sync?)
 Make the bootup process look prettier (remove loglevel?)
-Create new rEFInd theme
+Do something cool with gtk themes
 Install conky, write setup from scratch
 Make conky look good
 Custom conky animations?
 Get a good desktop background... maybe something animated, or something self-made
 Install development environment things
 Multiple modes? battlemode/standby/fs2?
+Install + setup thunderbird (sync?)
