@@ -2,4 +2,4 @@
 ".config/bspwm/bspwmrc" = "bspwmrc"
 
 [dotrix]
-ignore = [ "space-shuttle-simple.jpg" ]
+ignore = [ "space-shuttle-simple.jpg", "scratchpad" ]

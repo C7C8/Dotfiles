@@ -121,4 +121,7 @@ super + m
 	i3lock
 XF86Audio{LowerVolume,RaiseVolume}
 	pamixer -{d,i} 3 
-	
+super + x
+	id=$(cat /tmp/scratchid);\
+	bspc node $id --flag hidden;bspc node -f $id
+

@@ -8,8 +8,7 @@ xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 feh --bg-scale --no-xinerama --no-fehbg ~/dotfiles/bspwm/space-shuttle-simple.jpg
 
 # Keyboard settings
-setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?)
-xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
+setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
 xmodmap -e "keycode 248 = Alt_L"	# What the fuck? So this keycode pops up when I press G12... neat!
 
 # Monitor stuff
@@ -36,6 +35,10 @@ bspc config active_border_color		'#B3EOEO'	# tinged light cyan
 bspc config presel_feedback_color	'#FFFFFF'	# white
 bspc config borderless_monocle	true
 bspc config gapless_monocle	true
+
+# Scratchpad
+#bspc rule -a scratchpad sticky=on state=floating hidden=on
+#termite -t scratchpad -e ~/dotfiles/bspwm/scratchpad
 
 # Misc
 bspc history_aware_focus	true

@@ -2,7 +2,5 @@
 ".icons/Cyberfox" = "Cyberfox"
 ".icons/Nucleus" = "Nucleus"
 ".icons/default/index.theme" = "index.theme"
-".config/gtk-3.0/settings.ini" = "gtksettings"
+".config/gtk-3.0/settings.ini" = "gtk3-settings"
 
-[dotrix]
-ignore = [ "gengtk" ]
