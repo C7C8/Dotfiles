@@ -1,7 +1,7 @@
 # Sourec Dotfiles (*Sathanas*)
 
-These are my dotfiles, sathanas-grade. That means
-that they're designed to be used on a fast system with a full+
+These are my dotfiles. There are many like them, but these ones
+are mine. They're designed to be used on a fast system with a full+
 keyboard, not an ancient laptop like the other branch. Assume a
 desktop build with a number pad and two screens.
 
@@ -23,7 +23,7 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 * Vim
 * Termite
 * BSPWM/SXHKD
-* i3lock
+* i3lock-color
 * Git (obviously)
 
 More will be added here soon, see the TODO file for information on
