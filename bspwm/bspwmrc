@@ -37,8 +37,8 @@ bspc config borderless_monocle	true
 bspc config gapless_monocle	true
 
 # Scratchpad
-#bspc rule -a scratchpad sticky=on state=floating hidden=on
-#termite -t scratchpad -e ~/dotfiles/bspwm/scratchpad
+bspc rule -a scratchpad sticky=on state=floating hidden=on
+termite --class scratchpad -e ~/dotfiles/bspwm/scratchpad
 
 # Misc
 bspc history_aware_focus	true
