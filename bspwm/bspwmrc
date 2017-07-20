@@ -10,6 +10,8 @@ feh --bg-scale --no-xinerama --no-fehbg ~/dotfiles/media/space-shuttle-simple.jp
 # Keyboard settings
 setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
 xmodmap -e "keycode 248 = Alt_L"	# What the fuck? So this keycode pops up when I press G12... neat!
+xmodmap -e "keycode 108 = Escape"
+xmodmap -e "keycode 174 = ALt_L"
 
 # Monitor stuff
 bspc monitor DP-2 -d I II III IV V VI VII VIII IX X

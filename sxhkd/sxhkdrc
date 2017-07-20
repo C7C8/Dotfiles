@@ -37,7 +37,7 @@ super + {_, shift +}{1-9,0}
 	bspc {desktop -f, node -d} '^{1-9,10}'
 
 #Focus or send window to desktop on monitor two
-super + alt + {_, shift +}{1-9,0}
+super + alt + {_, ctrl +}{1-9,0}
 	bspc {desktop -f, node -d} '^{11-19,20}'
 
 # Focus or move window in direction
