@@ -36,9 +36,13 @@ super + Escape
 super + {_, shift +}{1-9,0}
 	bspc {desktop -f, node -d} '^{1-9,10}'
 
-#Focus or send window to desktop on monitor two
-super + alt + {_, ctrl +}{1-9,0}
-	bspc {desktop -f, node -d} '^{11-19,20}'
+# Focus or send window to desktop on monitor two, ^11-19
+super + alt + {_, shift +}{1-9}
+	bspc {desktop -f, node -d} '^1{1-9}'
+
+# Edge case for when monitor 20 is selected. SXHKD doesn't like ranges that involve more than one character (e.g. 11-19)
+super + alt + {_, shift +}0
+	bspc {desktop -f, node -d} '^20'
 
 # Focus or move window in direction
 super + {_,shift +_}{h, j, k, l}
