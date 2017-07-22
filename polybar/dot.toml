@@ -1,5 +1,5 @@
 [dotrix.link]
-".config/polybar/config" = "config"
+".config/polybar/config" = "config.ini"
 
 [dotrix]
 ignore = [ "polylaunch.sh" ]

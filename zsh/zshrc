@@ -2,7 +2,7 @@ export TERM="xterm-256color"
 export ZSH=/home/sourec/.oh-my-zsh
 source dotfiles/zsh/powerlevel9k/powerlevel9k.zsh-theme # theme
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/autojump.zsh
