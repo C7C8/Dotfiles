@@ -45,7 +45,7 @@ super + alt + {_, shift +}0
 	bspc {desktop -f, node -d} '^20'
 
 # Focus or move window in direction
-super + {_,shift +_}{h, j, k, l}
+super + {_,shift +}{h, j, k, l}
 	bspc node -{f,s} {west, south, north, east}
 
 # Focus by path
