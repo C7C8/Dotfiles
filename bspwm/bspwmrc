@@ -6,6 +6,7 @@
 compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 feh --bg-scale --no-xinerama --no-fehbg ~/dotfiles/media/space-shuttle-simple.jpg
+~/dotfiles/polybar/polylaunch.sh &
 
 # Keyboard settings
 setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
