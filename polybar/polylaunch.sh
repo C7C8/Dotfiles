@@ -1,3 +1,1 @@
-killall -q polybar
-polybar rightbar &
-polybar leftbar &
+polybar rightbar & polybar leftbar &
