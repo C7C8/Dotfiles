@@ -22,9 +22,12 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 * Zsh
 * Vim
 * Termite
-* BSPWM/SXHKD
+* BSPWM+SXHKD
 * i3lock-color
 * Git (obviously)
+* Polybar
+* Feh
+*
 
 More will be added here soon, see the TODO file for information on
 what future plans are.
