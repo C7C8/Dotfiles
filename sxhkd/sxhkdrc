@@ -122,7 +122,7 @@ super + ctrl + p
 super + ctrl + w
 	gnome-control-center network
 super + m
-	i3lock -i ~/dotfiles/media/hal-lockscreen.png --insidecolor=00000000 --ringcolor=00000000 --keyhlcolor=FF000059 --bshlcolor=FF000059 --linecolor 00000000 --textcolor=FFFFFFFF --ringwrongcolor=00000000 --ringvercolor=00000000 --insidewrongcolor=00000000 --insidevercolor=00000000	
+	~/dotfiles/scripts/lock.sh
 XF86Audio{LowerVolume,RaiseVolume}
 	pamixer -{d,i} 3 
 super + x
