@@ -23,7 +23,7 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 * Vim
 * Termite
 * BSPWM+SXHKD
-* i3lock-color
+* i3lock-color (the new version, i3lock-color-git)
 * Git (obviously)
 * Polybar
 * Feh
