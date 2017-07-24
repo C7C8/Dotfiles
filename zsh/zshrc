@@ -7,6 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/autojump.zsh
 plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools)
+export VISUAL="vim"
 
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
