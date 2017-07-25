@@ -5,7 +5,7 @@
 # place for a whole lot of init stuff.
 compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
-feh --bg-scale --no-xinerama --no-fehbg ~/dotfiles/media/solar.jpg
+~/dotfiles/scripts/setwallpaper.sh
 ~/dotfiles/polybar/polylaunch.sh &
 
 # Keyboard settings
