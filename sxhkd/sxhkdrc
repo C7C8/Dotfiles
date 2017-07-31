@@ -116,7 +116,7 @@ super + ctrl + f
 super + ctrl + v
 	gvim
 super + ctrl + m
-	pcmanfm -n ~/Music & vlc
+	pcmanfm -n ~/Music & vlc --intf qt --extraintf telnet --telnet-password admin
 super + ctrl + p
 	pavucontrol
 super + ctrl + w

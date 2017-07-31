@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 """
     VLCClient
     ~~~~~~~~~
@@ -22,6 +22,8 @@
     :author: Michael Mayr <michael@dermitch.de>
     :licence: MIT License
     :version: 0.2.0
+
+    Repeat+shuffle toggle functionality added by Sourec
 """
 
 from __future__ import print_function
@@ -29,6 +31,7 @@ from __future__ import print_function
 import sys
 import inspect
 import telnetlib
+from socket import error as socket_error
 
 DEFAULT_PORT = 4212
 
@@ -55,7 +58,13 @@ class VLCClient(object):
         assert self.telnet is None, "connect() called twice"
 
         self.telnet = telnetlib.Telnet()
-        self.telnet.open(self.server, self.port, self.timeout)
+
+        # Sourec modification -- fail gracefully if VLC isn't running, i.e. don't print a traceback
+        try:
+            self.telnet.open(self.server, self.port, self.timeout)
+        except socket_error as serr:
+            print("Not active");
+            exit(0);
 
         # Parse version
         result = self.telnet.expect([
@@ -182,6 +191,22 @@ class VLCClient(object):
         """Clear all items in playlist"""
         return self._send_command("clear")
 
+    def loop(self):
+        """Toggle loop"""
+        return self._send_command("loop")
+
+    def repeat(self):
+        """Toggle repeat"""
+        return self._send_command("repeat")
+
+    def shuffle(self):
+        """Toggle shuffle"""
+        return self._send_command("random")
+
+    def title(self):
+        """Get the current track title"""
+        return self._send_command("get_title")
+
     #
     # Volume
     #
@@ -216,13 +241,9 @@ def main():
     Run any commands via CLI interface
     """
     try:
-        server = sys.argv[1]
-        if ':' in server:
-            server, port = server.split(':')
-        else:
-            port = DEFAULT_PORT
-
-        command_name = sys.argv[2]
+        server = "127.0.0.1"
+        port = DEFAULT_PORT
+        command_name = sys.argv[1]
     except IndexError:
         print("usage: vlcclient.py server[:port] command [argument]",
               file=sys.stderr)
@@ -230,8 +251,6 @@ def main():
 
     vlc = VLCClient(server, int(port))
     vlc.connect()
-    print("Connected to VLC {0}\n".format(vlc.server_version),
-          file=sys.stderr)
 
     try:
         command = getattr(vlc, command_name)
@@ -246,7 +265,8 @@ def main():
             exit(1)
 
         result = command(*cli_args)
-        print(result)
+        if len(result) > 0:
+            print(result)
 
     except OldServerVersion as exc:
         print("Error: {0}\n".format(exc), file=sys.stderr)
