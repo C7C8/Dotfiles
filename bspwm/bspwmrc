@@ -10,14 +10,9 @@ xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 hddtemp -d /dev/sdb /dev/sdc /dev/sdd
 conky &
 
-# Autostart a few routine programs.
-telegram-desktop &
-discord & 		# it pains me so much to autostart an Electron-based application
-thunderbird & 		# Holy shit, this can't possibly end well
-
 # Keyboard settings
 setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) 
-xmodmap -e "keycode 248 = Alt_L"	# What the fuck?
+xmodmap -e "keycode 248 = Alt_L"	# g12->alt_l
 xmodmap -e "keycode 174 = Alt_L"
 xmodmap -e "keycode 108 = Escape"	# vim user detected
 
@@ -58,3 +53,9 @@ bspc rule -a conky border=false
 bspc rule -a TelegramDesktop desktop=VIII
 bspc rule -a KeePass2 desktop=X
 bspc rule -a discord desktop=VIII
+
+# Autostart a few routine programs.
+telegram-desktop &
+discord & 		# it pains me so much to autostart an Electron-based application
+thunderbird & 		# this can't possibly end badly, can it?
+
