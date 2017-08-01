@@ -7,6 +7,8 @@ compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 ~/dotfiles/scripts/setwallpaper.sh
 ~/dotfiles/polybar/polylaunch.sh &
+hddtemp -d /dev/sdb /dev/sdc /dev/sdd
+conky &
 
 # Keyboard settings
 setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
@@ -45,3 +47,6 @@ termite --class scratchpad -e ~/dotfiles/bspwm/scratchpad
 
 # Misc
 bspc history_aware_focus	true
+
+# Rules
+bspc rule -a conky border=false

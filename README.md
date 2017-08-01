@@ -27,7 +27,9 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 * Git (obviously)
 * Polybar
 * Feh
-*
+* Conky
+* hddtemp (make sure to get your permissions right!)
+* curl
 
 More will be added here soon, see the TODO file for information on
 what future plans are.
