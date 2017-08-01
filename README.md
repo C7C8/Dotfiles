@@ -18,11 +18,14 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 
 ## Required Software
 
+These programs are REQUIRED for the system to run as expected. If you
+don't have one of them, you're going to have some problems.
+
 * Dotrix (installation only)
 * Zsh
-* Vim
 * Termite
-* BSPWM+SXHKD
+* bspwm
+* sxhkd
 * i3lock-color (the new version, i3lock-color-git)
 * Git (obviously)
 * Polybar
@@ -30,6 +33,19 @@ from the *Freespace 2* universe: a *Moloch* is a light corvette, a
 * Conky
 * hddtemp (make sure to get your permissions right!)
 * curl
+* rofi
 
-More will be added here soon, see the TODO file for information on
-what future plans are.
+## Optional Software
+
+These programs are not strictly required, but they are mentioned in 
+few places. They likely won't cause any problems if not installed, but
+I haven't tested it, so I wouldn't know. These are mostly my own
+personal choices for daily programs.
+
+* Telegram
+* Discord
+* Thunderbird
+* Gnome Control Center (I use it for wireless management only, since it handles wireless better than most. Sue me.)
+* Pavucontrol
+* pcmanfm
+* Vim/GVim

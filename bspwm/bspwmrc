@@ -10,11 +10,16 @@ xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 hddtemp -d /dev/sdb /dev/sdc /dev/sdd
 conky &
 
+# Autostart a few routine programs.
+telegram-desktop &
+discord & 		# it pains me so much to autostart an Electron-based application
+thunderbird & 		# Holy shit, this can't possibly end well
+
 # Keyboard settings
-setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) xmodmap -e "keycode 108 = Escape"	# alt-r -> esc, for vim
-xmodmap -e "keycode 248 = Alt_L"	# What the fuck? So this keycode pops up when I press G12... neat!
+setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) 
+xmodmap -e "keycode 248 = Alt_L"	# What the fuck?
 xmodmap -e "keycode 174 = Alt_L"
-xmodmap -e "keycode 108 = Escape"
+xmodmap -e "keycode 108 = Escape"	# vim user detected
 
 # Monitor stuff
 bspc monitor DP-2 -d I II III IV V VI VII VIII IX X
@@ -50,3 +55,6 @@ bspc history_aware_focus	true
 
 # Rules
 bspc rule -a conky border=false
+bspc rule -a TelegramDesktop desktop=VIII
+bspc rule -a KeePass2 desktop=X
+bspc rule -a discord desktop=VIII
