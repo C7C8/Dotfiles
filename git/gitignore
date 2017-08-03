@@ -38,3 +38,4 @@ peda-session-ctarget.txt
 peda-session-rtarget.txt
 peda-session*
 *.tmp
+*.swo

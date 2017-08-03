@@ -34,6 +34,7 @@ don't have one of them, you're going to have some problems.
 * hddtemp (make sure to get your permissions right!)
 * curl
 * rofi
+* python-dateutil
 
 ## Optional Software
 
