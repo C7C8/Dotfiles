@@ -54,9 +54,11 @@ bspc rule -a TelegramDesktop desktop=VIII
 bspc rule -a KeePass2 desktop=X
 bspc rule -a discord desktop=VIII
 bspc rule -a Thunderbird desktop=IX
+bspc rule -a Slack desktop = XVIII
 
 # Autostart a few routine programs.
 telegram-desktop &
 discord & 		# it pains me so much to autostart an Electron-based application
 thunderbird & 		# this can't possibly end badly, can it?
+slack &
 
