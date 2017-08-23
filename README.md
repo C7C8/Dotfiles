@@ -1,4 +1,4 @@
-# Sourec Dotfiles (*Sathanas*)
+# Sourec Dotfiles (*Moloch2*)
 
 These are my dotfiles. There are many like them, but these ones
 are mine. They're designed to be used on a fast system with a full+
@@ -14,7 +14,9 @@ here, feel free to send me an email or raise an issue on the issue tracker.
 
 My naming convention is based on the names of Shivan capital ships 
 from the *Freespace 2* universe: a *Moloch* is a light corvette, a 
-*Sathanas* is a juggernaut, a *Ravana* is a destroyer, etc.
+*Sathanas* is a juggernaut, a *Ravana* is a destroyer, etc. These files
+are based on the *Sathanas* branch files, but with reduced complexity and
+monitor count, to allow for usage on a laptop.
 
 ## Required Software
 
@@ -29,6 +31,7 @@ don't have one of them, you're going to have some problems.
 * i3lock-color (the new version, i3lock-color-git)
 * Git (obviously)
 * Polybar
+* Compton
 * Feh
 * Conky
 * hddtemp (make sure to get your permissions right!)
@@ -44,7 +47,6 @@ I haven't tested it, so I wouldn't know. These are mostly my own
 personal choices for daily programs.
 
 * Telegram
-* Discord
 * Thunderbird
 * Gnome Control Center (I use it for wireless management only, since it handles wireless better than most. Sue me.)
 * Pavucontrol
