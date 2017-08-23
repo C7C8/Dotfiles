@@ -38,6 +38,7 @@ don't have one of them, you're going to have some problems.
 * curl
 * rofi
 * python-dateutil
+* light
 
 ## Optional Software
 
