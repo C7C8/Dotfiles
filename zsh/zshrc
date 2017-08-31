@@ -12,6 +12,7 @@ export VISUAL="vim"
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.*`
 
 # Less settings
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'

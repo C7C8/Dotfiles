@@ -7,7 +7,7 @@ compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
 ~/dotfiles/scripts/setwallpaper.sh
 ~/dotfiles/polybar/polylaunch.sh &
-hddtemp -d /dev/sdb /dev/sdc /dev/sdd
+xset -b
 conky &
 
 # Keyboard settings
@@ -56,5 +56,4 @@ bspc rule -a Slack desktop = VII
 # Autostart a few routine programs.
 telegram-desktop &
 thunderbird & 		# this can't possibly end badly, can it?
-slack &
 

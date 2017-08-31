@@ -5,6 +5,7 @@ set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/afte
 let g:clang_library_path='/usr/lib/libclang.so'
 let g:ycm_server_python_interpreter='/usr/bin/python2'
 
+set spell
 set autoindent
 set nowrap
 set hlsearch
@@ -12,6 +13,7 @@ set nocp
 set backspace=indent,eol,start
 set number
 set ruler
+set vb t_vb= 
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 syntax enable
@@ -44,5 +46,9 @@ augroup MyIMAPs
         au VimEnter * call IMAP('NOT', '\neg <++>', 'tex')
         au VimEnter * call IMAP('AND', '\wedge <++>', 'tex')
         au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
+        au VimEnter * call IMAP('UNI', '\cup <++>', 'tex')
+        au VimEnter * call IMAP('INR', '\cap <++>', 'tex')
         au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
+        au VimEnter * call IMAP('`P', '\Phi <++>', 'tex')
+        au VimEnter * call IMAP('`O', '\Omega <++>', 'tex')
 augroup END
