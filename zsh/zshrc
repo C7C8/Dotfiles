@@ -12,7 +12,6 @@ export VISUAL="vim"
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.*`
 
 # Less settings
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
@@ -43,8 +42,12 @@ function stopwatch(){
 }
 
 function sprep() {
-	echo "Lazy bastard..."
 	eval `ssh-agent` > /dev/null
-	sleep 0.5
 	ssh-add ~/.ssh/id_rsa.1 > /dev/null 2>&1
 }
+
+
+export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.*`
+if [[ -z "$SSH_AUTH_SOCK" ]] ; then
+	sprep
+fi
