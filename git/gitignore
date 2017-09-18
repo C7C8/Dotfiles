@@ -39,3 +39,7 @@ peda-session-rtarget.txt
 peda-session*
 *.tmp
 *.swo
+*.odt
+*.~lock.*
+*.pdf
+*.tar.bz2

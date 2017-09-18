@@ -5,6 +5,7 @@ set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/afte
 let g:clang_library_path='/usr/lib/libclang.so'
 let g:ycm_server_python_interpreter='/usr/bin/python2'
 
+set spell
 set autoindent
 set nowrap
 set hlsearch
