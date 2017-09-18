@@ -51,3 +51,6 @@ export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.*`
 if [[ -z "$SSH_AUTH_SOCK" ]] ; then
 	sprep
 fi
+
+# Aliases for the lazy
+alias x=exit
