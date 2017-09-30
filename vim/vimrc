@@ -52,4 +52,5 @@ augroup MyIMAPs
         au VimEnter * call IMAP('`P', '\Phi <++>', 'tex')
         au VimEnter * call IMAP('`O', '\Omega <++>', 'tex')
         au VimEnter * call IMAP('BINOM', '\binom{<++>}{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('SQRT', '\sqrt{<++>} <++>', 'tex')
 augroup END
