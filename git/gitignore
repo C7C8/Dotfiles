@@ -43,3 +43,5 @@ peda-session*
 *.~lock.*
 *.pdf
 *.tar.bz2
+*.docx
+*.tar.gz
