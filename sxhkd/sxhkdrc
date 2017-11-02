@@ -101,6 +101,8 @@ super + ctrl + {h,j,k,l}
 # LAUNCHERS
 # (stuff that I should have quick access to)
 
+super + shift + Return
+	termite -e "ssh sathanas"
 super + d
 	rofi -show run
 super + ctrl + f
