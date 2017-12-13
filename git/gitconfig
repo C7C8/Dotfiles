@@ -12,18 +12,20 @@
 [merge]
 	tool = meld
 [mergetool "meld"]
-	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+	cmd = env GTK_THEME=Adwaita:Light meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 [difftool "meld"]
 	cmd = meld $LOCAL $REMOTE
 [credential]
 	helper = cache --timeout 86400
 [alias]
 	fuck = reset --hard HEAD
-	unstage = reset
+	unstage = reset -q HEAD --
+	discard = checkout --
 	ada = add --all
 	coms = commit -S
 	logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --date-order
 	com = commit -m
 	st = status -sb
 	quamend = commit -S --amend --no-edit
+	fuckyou = push --force
 

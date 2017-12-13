@@ -63,3 +63,4 @@ augroup MyIMAPs
         au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
         au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
 augroup END
+syntax on

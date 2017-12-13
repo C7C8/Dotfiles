@@ -41,4 +41,12 @@ peda-session*
 *.swo
 *.pdf
 *.odt
+*.~lock.*
+*.pdf
 *.tar.bz2
+*.docx
+*.tar.gz
+*.ods
+*.tar.xz
+*.tar
+*.iml
