@@ -54,3 +54,6 @@ fi
 
 # Aliases for the lazy
 alias x=exit
+alias accio="sudo pacman -S"
+alias gource-p="gource --background-colour 000000 -a 0.05 -s 0.1 -e 0.05 --hide filenames -1920x1080"
+alias gource-ps="gource --background-colour 000000 -a 0.05 -s 0.5 -e 0.05 --hide filenames -1920x1080"

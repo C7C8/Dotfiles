@@ -54,7 +54,7 @@ augroup MyIMAPs
         au VimEnter * call IMAP('`N', '\nabla <++>', 'tex')
         au VimEnter * call IMAP('`T', '\theta<++>', 'tex')
         au VimEnter * call IMAP('BINOM', '\binom{<++>}{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('SQRT', '\sqrt{<++>} <++>', 'tex')
+        au VimEnter * call IMAP('SQRT', '\sqrt{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('DOT', '\cdot <++>', 'tex')
 
 	"SI unit stuff

@@ -45,13 +45,14 @@ termite --class scratchpad -e ~/dotfiles/bspwm/scratchpad &
 
 # Misc
 bspc history_aware_focus	true
+wmname LG3D # Some things don't work without this
 
 # Rules
 bspc rule -a conky border=false
 bspc rule -a TelegramDesktop desktop=VIII
 bspc rule -a KeePass2 desktop=X
 bspc rule -a Thunderbird desktop=IX
-bspc rule -a Slack desktop = VII
+bspc rule -a Slack desktop=VII
 
 # Autostart a few routine programs.
 telegram-desktop &
