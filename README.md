@@ -29,6 +29,7 @@ don't have one of them, you're going to have some problems.
 * i3lock-color (the new version, i3lock-color-git)
 * Git (obviously)
 * Polybar
+* Compton
 * Feh
 * Conky
 * hddtemp (make sure to get your permissions right!)

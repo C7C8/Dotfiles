@@ -47,7 +47,7 @@ termite --class scratchpad -e ~/dotfiles/bspwm/scratchpad &
 
 # Misc
 bspc history_aware_focus	true
-wmname LG3D # Select applications don't like it if this isn't set
+wmname LG3D # Some things don't work without this
 
 # Rules
 bspc rule -a conky border=false
