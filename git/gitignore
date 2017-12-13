@@ -45,3 +45,7 @@ peda-session*
 *.tar.bz2
 *.docx
 *.tar.gz
+*.ods
+*.tar.xz
+*.tar
+*.iml

@@ -29,7 +29,7 @@ endfunction
 call ToggleGUI()
 
 " vim-latex stuff?
-let g:tex_flavor='latex'
+let g:tex_flavor='latex' 
 augroup MyIMAPs
         au!
         au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
@@ -47,3 +47,4 @@ augroup MyIMAPs
         au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
         au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
 augroup END
+syntax on

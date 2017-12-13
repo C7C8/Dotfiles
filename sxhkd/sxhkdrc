@@ -123,8 +123,8 @@ super + ctrl + w
 	gnome-control-center network
 super + m
 	~/dotfiles/scripts/lock.sh
-XF86Audio{LowerVolume,RaiseVolume}
-	pamixer -{d,i} 3 
+XF86Audio{LowerVolume,RaiseVolume,Mute}
+	pamixer -{d,i,t} 3 
 super + x
 	id=$(cat /tmp/scratchid);\
 	bspc node $id --flag hidden;bspc node -f $id
