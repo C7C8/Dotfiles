@@ -14,10 +14,22 @@ set backspace=indent,eol,start
 set number
 set ruler
 set vb t_vb= 
+syntax on
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 syntax enable
 set background=dark
+
+"Make splitting easier
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+set splitbelow
+set splitright
+
+"Aliases
+cnoreabbrev ndt NERDTree
 
 " gvim fullscreen mode
 function! ToggleGUI()
@@ -30,7 +42,7 @@ endfunction
 call ToggleGUI()
 
 " vim-latex stuff?
-let g:tex_flavor='latex' 
+let g:tex_flavor='latex'
 augroup MyIMAPs
         au!
         au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
@@ -63,4 +75,4 @@ augroup MyIMAPs
         au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
         au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
 augroup END
-syntax on
+
