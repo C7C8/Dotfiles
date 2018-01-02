@@ -50,11 +50,13 @@ wmname LG3D # Some things don't work without this
 # Rules
 bspc rule -a conky border=false
 bspc rule -a TelegramDesktop desktop=VIII
+bspc rule -a discord desktop=VIII
 bspc rule -a KeePass2 desktop=X
 bspc rule -a Thunderbird desktop=IX
 bspc rule -a Slack desktop=VII
 
 # Autostart a few routine programs.
 telegram-desktop &
+discord &
 thunderbird & 		# this can't possibly end badly, can it?
 

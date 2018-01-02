@@ -15,7 +15,7 @@ set number
 set ruler
 set vb t_vb= 
 syntax on
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.pro set syntax=prolog
 
 syntax enable
 set background=dark
