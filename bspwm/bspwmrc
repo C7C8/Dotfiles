@@ -57,6 +57,5 @@ bspc rule -a Slack desktop=VII
 
 # Autostart a few routine programs.
 telegram-desktop &
-discord &
 thunderbird & 		# this can't possibly end badly, can it?
 
