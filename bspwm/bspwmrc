@@ -63,4 +63,5 @@ telegram-desktop &
 discord & 		# it pains me so much to autostart an Electron-based application
 thunderbird & 		# this can't possibly end badly, can it?
 slack &
+hamster &
 
