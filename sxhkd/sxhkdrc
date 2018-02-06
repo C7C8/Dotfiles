@@ -117,6 +117,8 @@ super + ctrl + w
 	gnome-control-center network
 super + m
 	~/dotfiles/scripts/lock.sh
+super + shift + m
+	~/dotfiles/scripts/lock.sh & systemctl suspend
 XF86Audio{LowerVolume,RaiseVolume}
 	pamixer -{d,i} 3 
 XF86MonBrightness{Up,Down}

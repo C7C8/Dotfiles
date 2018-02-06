@@ -12,9 +12,12 @@ conky &
 
 # Keyboard settings
 setxkbmap -option caps:backspace 	# one of the best things about colmaks (sp?) 
+xset r 66				# repeat capslock backspace
 xmodmap -e "keycode 248 = Alt_L"	# g12->alt_l
 xmodmap -e "keycode 174 = Alt_L"
-xmodmap -e "keycode 108 = Escape"	# vim user detected
+xmodmap -e "keycode 108 = Escape"
+xmodmap -e "keycode 22 =" 		# Disable backspace, for training purposes
+
 
 # Monitor stuff
 bspc monitor LVDS1 -d I II III IV V VI VII VIII IX X
