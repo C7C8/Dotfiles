@@ -62,6 +62,7 @@ fi
 # Aliases for the lazy
 alias x=exit
 alias :o=vim
+alias o=vim
 alias :x=exit
 alias :q=exit
 alias accio="sudo pacman -S"

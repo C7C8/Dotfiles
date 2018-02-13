@@ -63,11 +63,10 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('SQRT', '\sqrt{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('DOT', '\cdot <++>', 'tex')
 	au VimEnter * call IMAP('CE', '\ce{<++>}<++>', 'tex')
-
-	"SI unit stuff
 	au VimEnter * call IMAP('SI', '\si{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('SFI', '\si[per-mode=fraction]{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('LEW', '\lewis{<++>,<++>}<++>', 'tex')
 augroup END
 
