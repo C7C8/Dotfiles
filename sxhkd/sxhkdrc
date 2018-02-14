@@ -114,7 +114,7 @@ super + ctrl + m
 super + ctrl + p
 	pavucontrol
 super + ctrl + w
-	wicd-gtk
+	env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 super + m
 	~/dotfiles/scripts/lock.sh
 super + shift + m
@@ -130,4 +130,6 @@ F12
 super + x
 	id=$(cat /tmp/scratchid);\
 	bspc node $id --flag hidden;bspc node -f $id
+super + Print
+	gnome-screenshot -i
 
