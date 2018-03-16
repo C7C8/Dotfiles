@@ -19,7 +19,7 @@ xmodmap -e "keycode 108 = Escape"	# vim user detected
 
 # Monitor stuff
 bspc monitor DP-2 -d I II III IV V VI VII VIII IX X
-bspc monitor DP-0 -d XI XII XIII XIV XV XVI XVII XVIII XIX XX
+bspc monitor DVI-D-0 -d XI XII XIII XIV XV XVI XVII XVIII XIX XX
 bspc monitor '^1' -s '^2' # Check BSPWM issue #417 on github... I hate sorcery.
 
 # Layoutish stuff

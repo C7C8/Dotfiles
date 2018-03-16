@@ -51,3 +51,5 @@ peda-session*
 *.tar
 *.iml
 *.mp4
+.gradle
+out
