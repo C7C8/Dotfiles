@@ -69,3 +69,9 @@ alias accio="sudo pacman -S"
 alias gource-p="gource --background-colour 000000 -a 0.05 -s 0.1 -e 0.005 --hide filenames -1920x1080"
 alias gource-ps="gource --background-colour 000000 -a 0.05 -s 0.5 -e 0.005 --hide filenames -1920x1080"
 alias unfuck-my-windows="bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off"
+
+alias xauto='xrandr --output HDMI-1 --auto'
+alias xin='xrandr --output HDMI-1 --auto'
+alias xout='xrandr --output HDMI-1 --off'
+alias xr='xrandr --output HDMI-1 --right-of eDP-1'
+alias xscale='xrandr --output eDP-1 --scale-from 1920x1080'

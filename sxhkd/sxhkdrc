@@ -133,3 +133,9 @@ super + x
 super + Print
 	gnome-screenshot -i
 
+# =============================
+# SOUNDBOARD
+# (because why not?)
+
+super + ctrl + shift + i
+	pamixer --set-volume 100 && play /home/sourec/dotfiles/media/inception.mp3 && pamixer --set-volume 0
