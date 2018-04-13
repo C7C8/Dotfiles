@@ -59,6 +59,11 @@ if [[ -z "$SSH_AUTH_SOCK" ]] ; then
 	sprep
 fi
 
+function youtube-dl-ogg() {
+	youtube-dl --audio-format vorbis -f bestaudio -x -o "$2.webm" "$1"
+	touch "$2.ogg"
+}
+
 # Aliases for the lazy
 alias x=exit
 alias :o=vim

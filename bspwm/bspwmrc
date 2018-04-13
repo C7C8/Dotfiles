@@ -17,7 +17,6 @@ xmodmap -e "keycode 248 = Alt_L"	# g12->alt_l
 xmodmap -e "keycode 174 = Alt_L"
 xmodmap -e "keycode 108 = Escape"
 
-
 # Monitor stuff
 bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
 

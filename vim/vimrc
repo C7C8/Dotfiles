@@ -15,7 +15,7 @@ set number
 set ruler
 set vb t_vb= 
 syntax on
-au BufNewFile,BufRead *.pro set syntax=prolog
+au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 syntax enable
 set background=dark
@@ -70,3 +70,59 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('LEW', '\lewis{<++>,<++>}<++>', 'tex')
 augroup END
 
+"vim-plug, why not
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-textobj-quote'
+Plug 'reedes/vim-textobj-sentence'
+Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-wheel'
+call plug#end()
+
+function! Writer()
+	colo seoul256-light
+	set background=dark
+
+	"the below is from https://github.com/reedes/vim-pencil
+	call pencil#init()
+	call lexical#init()
+	call litecorrect#init()
+
+	" manual reformatting shortcuts
+	nnoremap <buffer> <silent> Q gqap
+	xnoremap <buffer> <silent> Q gq
+	nnoremap <buffer> <silent> <leader>Q vapJgqap
+
+	" force top correction on most recent misspelling
+	nnoremap <buffer> <c-s> [s1z=<c-o>
+	inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
+
+	" replace common punctuation
+	iabbrev <buffer> -- –
+	iabbrev <buffer> --- —
+	iabbrev <buffer> << «
+	iabbrev <buffer> >> »
+
+	" open most folds
+	setlocal foldlevel=6
+
+	" replace typographical quotes (reedes/vim-textobj-quote)
+	map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
+	map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
+
+	" highlight words (reedes/vim-wordy)
+	noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+	xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+	inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
+
+	Goyo
+	Limelight
+
+endfunction
+
+command! -nargs=0 Writer call Writer()
+command! -nargs=0 ToggleGUI call ToggleGUI()

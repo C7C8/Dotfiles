@@ -50,9 +50,11 @@ peda-session*
 *.tar.xz
 *.tar
 *.iml
+*.mp4
 out
 .gradle
-.ccsproject
+*.ccsproject
 .launches/
 .project
 .settings/
+*.lib

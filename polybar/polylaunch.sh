@@ -1,1 +1,1 @@
-polybar mainbar
+polybar mainbar & 

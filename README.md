@@ -1,4 +1,4 @@
-# Sourec Dotfiles (*Moloch2*)
+# Sourec Dotfiles (*Galatea*)
 
 These are my dotfiles. There are many like them, but these ones
 are mine. They're designed to be used on a fast system with a full+
@@ -48,6 +48,7 @@ I haven't tested it, so I wouldn't know. These are mostly my own
 personal choices for daily programs.
 
 * Telegram
+* Discord
 * Thunderbird
 * Gnome Control Center (I use it for wireless management only, since it handles wireless better than most. Sue me.)
 * Pavucontrol
