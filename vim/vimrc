@@ -44,35 +44,91 @@ call ToggleGUI()
 " vim-latex stuff?
 let g:tex_flavor='latex'
 augroup MyIMAPs
-        au!
-        au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
-        au VimEnter * call IMAP('PRD', '\prod\limits_{<++>}^{<++>} <++>', 'tex')
-        au VimEnter * call IMAP('LIM', '\lim\limits_{<++>} <++>', 'tex')
-        au VimEnter * call IMAP('INF', '\infty', 'tex')
-        au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>} <++>', 'tex')
-        au VimEnter * call IMAP('INT', '\int\limits_{<++>}^{<++>} <++>', 'tex')
-        au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('BSK', '\bigskip\noindent <++>', 'tex')
-        au VimEnter * call IMAP('ABS', '\lvert <++>\rvert <++>', 'tex')
-        au VimEnter * call IMAP('PDV', '\frac{\delta <++>}{\delta <++>}<++>', 'tex')
-        au VimEnter * call IMAP('NOT', '\neg <++>', 'tex')
-        au VimEnter * call IMAP('AND', '\wedge <++>', 'tex')
-        au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
-        au VimEnter * call IMAP('UNI', '\cup <++>', 'tex')
-        au VimEnter * call IMAP('INR', '\cap <++>', 'tex')
-        au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
-        au VimEnter * call IMAP('`P', '\Phi <++>', 'tex')
-        au VimEnter * call IMAP('`O', '\Omega <++>', 'tex')
-        au VimEnter * call IMAP('`N', '\nabla <++>', 'tex')
-        au VimEnter * call IMAP('`T', '\theta<++>', 'tex')
-        au VimEnter * call IMAP('BINOM', '\binom{<++>}{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('SQRT', '\sqrt{<++>}<++>', 'tex')
+	au!
+	au VimEnter * call IMAP('SUM', '\sum\limits_{<++>}^{<++>} <++>', 'tex')
+	au VimEnter * call IMAP('PRD', '\prod\limits_{<++>}^{<++>} <++>', 'tex')
+	au VimEnter * call IMAP('LIM', '\lim\limits_{<++>} <++>', 'tex')
+	au VimEnter * call IMAP('INF', '\infty', 'tex')
+	au VimEnter * call IMAP('DRV', '\frac{d<++>}{d<++>} <++>', 'tex')
+	au VimEnter * call IMAP('INT', '\int\limits_{<++>}^{<++>} <++>', 'tex')
+	au VimEnter * call IMAP('FRA', '\frac{<++>}{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('BSK', '\bigskip\noindent <++>', 'tex')
+	au VimEnter * call IMAP('ABS', '\lvert <++>\rvert <++>', 'tex')
+	au VimEnter * call IMAP('PDV', '\frac{\delta <++>}{\delta <++>}<++>', 'tex')
+	au VimEnter * call IMAP('NOT', '\neg <++>', 'tex')
+	au VimEnter * call IMAP('AND', '\wedge <++>', 'tex')
+	au VimEnter * call IMAP('OR', '\vee <++>', 'tex')
+	au VimEnter * call IMAP('UNI', '\cup <++>', 'tex')
+	au VimEnter * call IMAP('INR', '\cap <++>', 'tex')
+	au VimEnter * call IMAP('XOR', '\bigoplus <++>', 'tex')
+	au VimEnter * call IMAP('`P', '\Phi <++>', 'tex')
+	au VimEnter * call IMAP('`O', '\Omega <++>', 'tex')
+	au VimEnter * call IMAP('`N', '\nabla <++>', 'tex')
+	au VimEnter * call IMAP('`T', '\theta<++>', 'tex')
+	au VimEnter * call IMAP('BINOM', '\binom{<++>}{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('SQRT', '\sqrt{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('DOT', '\cdot <++>', 'tex')
 
 	"SI unit stuff
-        au VimEnter * call IMAP('SI', '\si{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('SFI', '\si[per-mode=fraction]{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('SI', '\si{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('SFI', '\si[per-mode=fraction]{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
+	au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
 augroup END
 
+"vim-plug, why not
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-textobj-quote'
+Plug 'reedes/vim-textobj-sentence'
+Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-wheel'
+call plug#end()
+
+function! Writer()
+	colo seoul256-light
+	set background=dark
+
+	"the below is from https://github.com/reedes/vim-pencil
+	call pencil#init()
+	call lexical#init()
+	call litecorrect#init()
+
+	" manual reformatting shortcuts
+	nnoremap <buffer> <silent> Q gqap
+	xnoremap <buffer> <silent> Q gq
+	nnoremap <buffer> <silent> <leader>Q vapJgqap
+
+	" force top correction on most recent misspelling
+	nnoremap <buffer> <c-s> [s1z=<c-o>
+	inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
+
+	" replace common punctuation
+	iabbrev <buffer> -- –
+	iabbrev <buffer> --- —
+	iabbrev <buffer> << «
+	iabbrev <buffer> >> »
+
+	" open most folds
+	setlocal foldlevel=6
+
+	" replace typographical quotes (reedes/vim-textobj-quote)
+	map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
+	map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
+
+	" highlight words (reedes/vim-wordy)
+	noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+	xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+	inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
+
+	Goyo
+	Limelight
+
+endfunction
+
+command! -nargs=0 Writer call Writer()
+command! -nargs=0 ToggleGUI call ToggleGUI()

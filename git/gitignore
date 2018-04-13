@@ -53,3 +53,8 @@ peda-session*
 *.mp4
 .gradle
 out
+*.ccsproject
+.launches/
+.settings/
+.project
+*.lib
