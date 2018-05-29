@@ -1,3 +1,0 @@
-Install development environment things
-Multiple modes? battlemode/standby/fs2?
-Install + setup thunderbird (sync?)
