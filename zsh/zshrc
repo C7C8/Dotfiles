@@ -7,7 +7,7 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/autojump.zsh
-plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools)
+plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools virtualenv)
 export VISUAL="vim"
 
 # Misc config 
@@ -60,6 +60,6 @@ function youtube-dl-ogg() {
 alias x=exit
 alias :o=vim
 alias accio="sudo pacman -S"
-alias gource-p="gource --background-colour 000000 -a 0.05 -s 0.1 -e 0.005 --hide filenames -1920x1080"
-alias gource-ps="gource --background-colour 000000 -a 0.05 -s 0.5 -e 0.005 --hide filenames -1920x1080"
+alias gource-p="gource --hide filenames,mouse --background-colour 000000 -a 0.05 -s 0.1 -e 0.005 -1920x1080"
+alias gource-ps="gource --hide filenames,mouse --background-colour 000000 -a 1.5 -s 3.0 -e 0.005 -1920x1080"
 alias unfuck-my-windows="bspc node \$(bspc query -N -n .hidden | tail -n1) -g hidden=off"

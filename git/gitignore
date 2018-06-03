@@ -58,3 +58,6 @@ out
 .settings/
 .project
 *.lib
+venv
+__pycache__
+env
