@@ -136,4 +136,4 @@ super + Print
 # (because why not?)
 
 super + ctrl + shift + i
-	pamixer --set-volume 100 && play /home/sourec/dotfiles/media/inception.mp3 && pamixer --set-volume 0
+	pamixer --set-volume 100 && play /home/sourec/dotfiles/media/sounds/inception.mp3 && pamixer --set-volume 0
