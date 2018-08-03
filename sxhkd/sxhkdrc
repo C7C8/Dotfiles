@@ -110,7 +110,7 @@ super + ctrl + v
 super + ctrl + m
 	pcmanfm -n ~/Music & vlc 
 super + ctrl + p
-	pavucontrol
+	env GTK_THEME=Adwaita pavucontrol
 super + ctrl + w
 	env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 super + m
