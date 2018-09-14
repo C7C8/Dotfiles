@@ -10,6 +10,10 @@ source /etc/profile.d/autojump.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools)
 export VISUAL="vim"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
 
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
@@ -49,9 +53,9 @@ function sprep() {
 }
 
 function sync-my-stuff() {
-	unison ~/Documents/School\ Stuff ssh://192.168.1.3/UDocuments/School\ Stuff
-	unison ~/Documents/Projects ssh://192.168.1.3/UDocuments/Projects
-	unison ~/Music ssh://192.168.1.3/Music
+	unison ~/Documents/School\ Stuff ssh://$1/UDocuments/School\ Stuff
+	unison ~/Documents/Projects ssh://$1/UDocuments/Projects
+	unison ~/Music ssh://$1/Music
 }
 
 
@@ -82,3 +86,4 @@ alias xin='xrandr --output HDMI-1 --auto'
 alias xout='xrandr --output HDMI-1 --off'
 alias xr='xrandr --output HDMI-1 --right-of eDP-1'
 alias xscale='xrandr --output eDP-1 --scale-from 1920x1080'
+
