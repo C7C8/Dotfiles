@@ -1,6 +1,7 @@
 [dotrix.link]
-"dotfiles/media/wallpaper-base" = "wallpapers/kobayashi-maru-solarized.png"
+"dotfiles/media/wallpaper-base.png" = "wallpapers/solar.png"
 "dotfiles/media/lockscreen.png" = "lockscreens/hal-transparent.png"
 
 [dotrix]
-ignore = [ "lockscreen.png", "wallpaper-base", "wallpapers", "lockscreens", "sounds" ]
+ignore = [ "lockscreen.png", "wallpaper-base.png", "wallpapers", "lockscreens",
+		"sounds" ]
