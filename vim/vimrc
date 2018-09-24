@@ -73,6 +73,7 @@ augroup MyIMAPs
 	au VimEnter * call IMAP('SNI', '\SI{<++>}{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('NUM', '\num{<++>}<++>', 'tex')
 	au VimEnter * call IMAP('LEW', '\lewis{<++>,<++>}<++>', 'tex')
+	au VimEnter * call IMAP('RW', '\rightarrow <++>', 'tex')
 augroup END
 
 "vim-plug, why not
