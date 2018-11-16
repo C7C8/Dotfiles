@@ -28,4 +28,4 @@
 	st = status -sb
 	quamend = commit -S --amend --no-edit
 	fuckyou = push --force
-
+	diffc = diff --cached

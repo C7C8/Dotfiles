@@ -60,3 +60,5 @@ out
 *.lib
 *.aux
 __pycache__
+node_modules
+dist

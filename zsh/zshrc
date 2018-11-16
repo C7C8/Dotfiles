@@ -86,4 +86,5 @@ alias xin='xrandr --output HDMI-1 --auto'
 alias xout='xrandr --output HDMI-1 --off'
 alias xr='xrandr --output HDMI-1 --right-of eDP-1'
 alias xscale='xrandr --output eDP-1 --scale-from 1920x1080'
+alias gradle='TERM=dumb gradle'
 

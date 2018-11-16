@@ -81,6 +81,10 @@ super + alt + shift + {h, j, k, l}
 super + {t, shift + t, s, f}
 	bspc node -t {tiled, pseudo_tiled, floating, fullscreen}
 
+# Set window flags
+super + {shift + s}
+	bspc node -g {sticky}
+
 # =============================
 # PRESELECTION COMMANDS
 # (decide where things should go before they exist}
