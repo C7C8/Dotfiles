@@ -61,3 +61,5 @@ out
 venv
 __pycache__
 env
+local.properties
+node_modules

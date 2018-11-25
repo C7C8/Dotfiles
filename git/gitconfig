@@ -22,11 +22,12 @@
 	unstage = reset -q HEAD --
 	discard = checkout --
 	ada = add --all
-	coms = commit -S -m
+	coms = commit -S
 	cos = commit -S
 	logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --date-order
 	com = commit -m
 	st = status -sb
 	quamend = commit -S --amend --no-edit
 	fuckyou = push --force
+	diffc = diff --cached
 
