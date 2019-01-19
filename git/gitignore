@@ -62,3 +62,10 @@ out
 __pycache__
 node_modules
 dist
+gradle
+*/build/*
+*.atl
+*.bbl
+*.blg
+*.mw
+*.toc

@@ -117,6 +117,8 @@ super + ctrl + p
 	env GTK_THEME=Adwaita pavucontrol
 super + ctrl + w
 	env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+super + ctrl + c
+	~/dotfiles/scripts/camera.sh
 super + m
 	~/dotfiles/scripts/lock.sh
 super + shift + m
