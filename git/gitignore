@@ -69,3 +69,5 @@ gradle
 *.blg
 *.mw
 *.toc
+env/
+venv/
