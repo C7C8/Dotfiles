@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# This file is run when BSPWM starts, or when the display
-# manager (SLIM) launches it. Consequently, it's a good
+# This file is run when BSPWM starts. It's a good
 # place for a whole lot of init stuff.
 compton --config .config/compton/compton.conf -b
 xsetroot -cursor_name left_ptr	# why won't this run in xinitrc...?
@@ -55,6 +54,7 @@ bspc rule -a discord desktop=VIII
 bspc rule -a KeePass2 desktop=X
 bspc rule -a Thunderbird desktop=IX
 bspc rule -a Slack desktop=VII
+bspc rule -a speedcrunch state=floating
 
 # Autostart a few routine programs.
 telegram-desktop &

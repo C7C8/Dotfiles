@@ -71,3 +71,6 @@ gradle
 *.toc
 env/
 venv/
+*.pkl
+*.lof
+*.synctex.gz
