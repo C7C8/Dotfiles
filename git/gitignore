@@ -63,3 +63,5 @@ __pycache__
 env
 local.properties
 node_modules
+.ipynb_checkpoints
+*.classpath

@@ -105,6 +105,15 @@ super + ctrl + space
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
+# ============================
+# MEDIA KEYS
+XF86AudioPlay
+	~/dotfiles/scripts/vlcclient.py pause
+XF86AudioNext
+	~/dotfiles/scripts/vlcclient.py next
+XF86AudioPrev
+	~/dotfiles/scripts/vlcclient.py prev
+
 # =============================
 # LAUNCHERS
 # (stuff that I should have quick access to)
