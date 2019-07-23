@@ -53,8 +53,8 @@ function sprep() {
 }
 
 function sync-my-stuff() {
-	unison ~/Documents/School\ Stuff ssh://$1/UDocuments/School\ Stuff
-	unison ~/Documents/Projects ssh://$1/UDocuments/Projects
+	unison ~/Documents/School\ Stuff ssh://$1/Documents/School\ Stuff
+	unison ~/Documents/Projects ssh://$1/Documents/Projects
 	unison ~/Music ssh://$1/Music
 }
 
@@ -78,6 +78,7 @@ alias :q=exit
 alias accio="sudo pacman -S"
 alias gource-p="gource --background-colour 000000 -a 0.05 -s 0.1 -e 0.005 --hide filenames -1920x1080"
 alias gource-ps="gource --background-colour 000000 -a 0.05 -s 0.5 -e 0.005 --hide filenames -1920x1080"
+alias gource-pss="gource --background-colour 000000 -a 1 -s 3 -e 0.005 --hide filenames -1920x1080"
 alias unfuck-my-windows="bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off"
 alias screensaver="pipes -p 10 -f 60 -R -s 15"
 
