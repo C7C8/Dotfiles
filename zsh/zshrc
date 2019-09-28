@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/autojump.zsh
 plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools virtualenv)
 export VISUAL="vim"
+setopt histignorespace
 
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
@@ -42,18 +43,21 @@ function stopwatch(){
    done
 }
 
-function sprep() {
+export SSH_AUTH_SOCK=$(find /tmp/ssh*/agent.*) 2>/dev/null
+if [[ -z "$SSH_AUTH_SOCK" ]] ; then
 	eval `ssh-agent` > /dev/null
 	ssh-add ~/.ssh/id_rsa.1 > /dev/null 2>&1
-}
-export SSH_AUTH_SOCK=$(find /tmp/ssh*/agent.*) # WHHYYYYY
-if [[ -z "$SSH_AUTH_SOCK" ]] ; then
-	sprep
 fi
 
 function youtube-dl-ogg() {
 	youtube-dl --audio-format vorbis -f bestaudio -x -o "$2.webm" "$1"
 	touch "$2.ogg"
+}
+
+function set-statement-dates() {
+	for file in *; do 
+		touch -d "`echo "$file" | grep -Po "\w+\s\d+"`" "$file";
+	done
 }
 
 # Aliases for the lazy
@@ -66,3 +70,4 @@ alias unfuck-my-windows="bspc node \$(bspc query -N -n .hidden | tail -n1) -g hi
 alias gradle="TERM=dumb gradle test"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:/home/sourec/.local/bin

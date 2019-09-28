@@ -65,3 +65,5 @@ local.properties
 node_modules
 .ipynb_checkpoints
 *.classpath
+gradle/
+gradlew.bat

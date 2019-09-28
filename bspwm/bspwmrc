@@ -58,11 +58,12 @@ bspc rule -a discord desktop=VIII
 bspc rule -a Thunderbird desktop=IX
 bspc rule -a Slack desktop=XVIII
 bspc rule -a libreoffice state=tiled
+bspc rule -a eu.tiliado.NuvolaAppGoogleCalendar desktop=XIX
 
 # Autostart a few routine programs.
 telegram-desktop &
 discord & 		# it pains me so much to autostart an Electron-based application
 thunderbird & 		# this can't possibly end badly, can it?
 slack &
-hamster &
+google-calendar &
 
