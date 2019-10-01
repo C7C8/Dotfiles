@@ -47,11 +47,6 @@ function stopwatch(){
    done
 }
 
-function sprep() {
-	eval `ssh-agent` > /dev/null
-	ssh-add ~/.ssh/id_rsa.1 > /dev/null 2>&1
-}
-
 function sync-my-stuff() {
 	unison ~/Documents/School\ Stuff ssh://$1/Documents/School\ Stuff
 	unison ~/Documents/Projects ssh://$1/Documents/Projects
@@ -59,9 +54,10 @@ function sync-my-stuff() {
 }
 
 
-export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.*`
+export SSH_AUTH_SOCK=`find /tmp/ssh-*/agent.* 2>/dev/null`
 if [[ -z "$SSH_AUTH_SOCK" ]] ; then
-	sprep
+	eval `ssh-agent` > /dev/null
+	ssh-add ~/.ssh/id_rsa.1 > /dev/null 2>&1
 fi
 
 function youtube-dl-ogg() {
