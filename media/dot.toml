@@ -1,6 +1,5 @@
 [dotrix.link]
-"dotfiles/media/wallpaper-base" = "wallpapers/kobayashi-maru-solarized.png"
-"dotfiles/media/lockscreen.png" = "lockscreens/hal-transparent.png"
+"dotfiles/media/wallpaper-base" = "wallpapers/blue_galaxy_2-wallpaper-2560x1600.jpg"
 
 [dotrix]
 ignore = [ "lockscreen.png", "wallpaper-base", "wallpapers", "lockscreens", "sounds" ]
