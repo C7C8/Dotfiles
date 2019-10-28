@@ -76,3 +76,8 @@ venv/
 *.synctex.gz
 virt
 .serverless
+CMakeCache.txt
+cmake_install.cmake
+*.a
+*.cbp
+dbconfig.json
