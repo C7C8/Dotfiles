@@ -51,6 +51,7 @@ function sync-my-stuff() {
 	unison ~/Documents/School\ Stuff ssh://$1/Documents/School\ Stuff
 	unison ~/Documents/Projects ssh://$1/Documents/Projects
 	unison ~/Music ssh://$1/Music
+	unison ~/Documents/DND\ Stuff ssh://$1/Documents/DND\ Stuff
 }
 
 

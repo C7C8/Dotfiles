@@ -86,20 +86,20 @@ settings_table = {
     thickness=6,
     start_angle=0,
     end_angle=360
-  }, {
-    name='texeci',
-    arg='1 get_nvidia_temp.sh',
-    max=65,
-    bg_colour=0xFFFFFF,
-    bg_alpha=0.2,
-    fg_colour=0xFFFFFF,
-    fg_alpha=0.9,
-    x=65, y=365,
-    radius=31,
-    thickness=3,
-    start_angle=0,
-    end_angle=360
-  },
+  }, --{
+  --  name='texeci',
+  --  arg='1 get_nvidia_temp.sh',
+  --  max=65,
+  --  bg_colour=0xFFFFFF,
+  --  bg_alpha=0.2,
+  --  fg_colour=0xFFFFFF,
+  --  fg_alpha=0.9,
+  --  x=65, y=365,
+  --  radius=31,
+  --  thickness=3,
+  --  start_angle=0,
+  --  end_angle=360
+  --},]
 
 
   { -- Seconds

@@ -28,7 +28,7 @@ filter_unmatched_urls = true
 foreground      = #eceff1
 foreground_bold = #eceff1
 cursor          = #eceff1
-background      = #263238
+background      = rgba(38, 50, 56, 0.9)
 
 # black
 color0  = #263238
