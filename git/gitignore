@@ -81,3 +81,4 @@ cmake_install.cmake
 *.a
 *.cbp
 dbconfig.json
+.node-version

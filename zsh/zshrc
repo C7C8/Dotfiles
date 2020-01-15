@@ -52,6 +52,7 @@ function sync-my-stuff() {
 	unison ~/Documents/Projects ssh://$1/Documents/Projects
 	unison ~/Music ssh://$1/Music
 	unison ~/Documents/DND\ Stuff ssh://$1/Documents/DND\ Stuff
+	unison ~/Documents/mindforger-repository ssh://$1/Documents/mindforger-repository
 }
 
 
@@ -65,6 +66,9 @@ function youtube-dl-ogg() {
 	youtube-dl --audio-format vorbis -f bestaudio -x -o "$2.webm" "$1"
 	touch "$2.ogg"
 }
+
+eval "$(nodenv init -)"
+
 
 # Aliases for the lazy
 alias x=exit
