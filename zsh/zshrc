@@ -9,11 +9,15 @@ source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/autojump.zsh
 plugins=(autojump archlinux common-aliases git git-extras git-flow git_remote_branch gpg-agent history sudo urltools virtualenv)
 export VISUAL="vim"
-setopt histignorespace
+setopt histignorespace autopushd pushdminus pushdsilent pushdtohome
 
 # Misc config 
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
 
 # Less settings
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
@@ -68,6 +72,17 @@ alias gource-p="gource --hide filenames,mouse --background-colour 000000 -a 0.05
 alias gource-ps="gource --hide filenames,mouse --background-colour 000000 -a 1.5 -s 3.0 -e 0.005 -1920x1080"
 alias unfuck-my-windows="bspc node \$(bspc query -N -n .hidden | tail -n1) -g hidden=off"
 alias gradle="TERM=dumb gradle test"
+alias yay="yay --editmenu"
+alias s3="aws s3"
+alias dh='dirs -v'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/home/sourec/.local/bin
+
+PATH="/home/sourec/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/sourec/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/sourec/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/sourec/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/sourec/perl5"; export PERL_MM_OPT;
+source /usr/share/nvm/init-nvm.sh
+export SSLKEYLOGFILE=/home/sourec/keylog.log

@@ -67,3 +67,12 @@ node_modules
 *.classpath
 gradle/
 gradlew.bat
+CMakeCache.txt
+cmake_install.cmake
+cmake-build-release
+.serverless
+*.jpg
+*.npy
+dist
+*.css
+*.css.map

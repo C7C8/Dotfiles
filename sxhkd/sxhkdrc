@@ -120,6 +120,8 @@ XF86AudioPrev
 
 super + d
 	rofi -show run
+super + shift + d
+	rofi -show calc -modi calc -no-show-match -no-sort
 super + ctrl + f
 	pcmanfm -n
 super + ctrl + v
@@ -139,4 +141,3 @@ XF86Audio{LowerVolume,RaiseVolume,Mute}
 super + x
 	id=$(cat /tmp/scratchid);\
 	bspc node $id --flag hidden;bspc node -f $id
-
