@@ -1,0 +1,20 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); 
+#tabbrowser-tabs {
+    visibility: collapse !important;
+}
+
+#sidebar-box {
+    overflow-x: hidden;
+    min-width: 15px !important;
+    max-width: 15px !important;
+}
+
+#sidebar-box:hover {
+    min-width: 275px !important;
+    max-width: 275px !important;
+} 
+
+#contentAreaContextMenu {
+	margin-left: 4px;
+}
+

@@ -74,5 +74,4 @@ cmake-build-release
 *.jpg
 *.npy
 dist
-*.css
 *.css.map
