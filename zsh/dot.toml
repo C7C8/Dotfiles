@@ -1,5 +1,6 @@
 [dotrix.link]
 ".zshrc" = "zshrc"
+".p10k.zsh" = "p10k.zsh"
 
 [dotrix]
-ignore = [ "powerlevel9k" ]
+ignore = [ "powerlevel10k" ]
