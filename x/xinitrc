@@ -1,3 +1,4 @@
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 sxhkd & 
+gnome-screensaver &
 exec bspwm 2>~/.bspwm.err

@@ -75,3 +75,4 @@ cmake-build-release
 *.npy
 dist
 *.css.map
+core.*
